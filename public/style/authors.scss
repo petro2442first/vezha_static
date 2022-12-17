@@ -1,0 +1,138 @@
+.authors {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  max-width: 1380px;
+  margin-bottom: 60px;
+  &__title {
+    font-style: normal;
+    font-weight: 800;
+    font-size: 28px;
+    line-height: 33px;
+
+    color: $primary-color;
+    align-self: flex-start;
+  }
+  &__list {
+    max-width: 1380px;
+    position: relative;
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      right: -68px;
+      bottom: 167px;
+      width: 105px;
+      height: 98px;
+      background-image: url(../assets/images/branded_circle.svg);
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      z-index: -1;
+      transform: rotate(93.76deg);
+    }
+    .swiper {
+      max-width: 1380px;
+      position: relative;
+      padding: 50px 0px 108px 0px;
+      &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: calc(100% - 176px);
+        background: $secondary-color;
+        z-index: -1;
+      }
+      .swiper-button-prev,
+      .swiper-button-next {
+        &::after {
+          content: none;
+        }
+
+        top: calc(100% - 19px);
+        background-image: url(../assets/images/red_arrow.svg);
+        background-position: center center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 38px;
+        height: 38px;
+      }
+      .swiper-button-prev {
+        transform: rotate(180deg);
+
+        left: calc(50% - 57px);
+      }
+      .swiper-button-next {
+        right: calc(50% - 57px);
+      }
+      .swiper-slide {
+        &:nth-child(2n) {
+          .author {
+            &__thumbnail {
+              &::before {
+                content: "";
+                display: block;
+                position: absolute;
+                left: -37px;
+                top: -47px;
+                width: 105px;
+                height: 97.65px;
+                background-image: url(../assets/images/branded_circle.svg);
+                background-position: center center;
+                background-repeat: no-repeat;
+                background-size: contain;
+                z-index: -1;
+                transition: 0.3s;
+              }
+            }
+          }
+        }
+        &:nth-child(4n) {
+          .author {
+            &__thumbnail {
+              &::before {
+                content: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.author {
+  &:hover {
+    .author__thumbnail {
+      transform: translateY(-10px);
+      &::before {
+        transform: translateY(10px);
+      }
+    }
+  }
+  &__thumbnail {
+    position: relative;
+    transition: 0.3s;
+  }
+  &__title {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 24px;
+
+    color: $primary-color;
+
+    margin-top: 15px;
+  }
+  &__description {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+
+    color: $primary-color;
+  }
+}

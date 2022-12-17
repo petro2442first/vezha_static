@@ -1,0 +1,104 @@
+.footer {
+  background: #231f20;
+  padding: 20px 20px 25px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &__container {
+    display: grid;
+    grid-template-columns: minmax(auto, 370px) auto;
+    grid-template-areas:
+      "logo  nav"
+      "links tags"
+      "copy copy";
+    gap: 47px 194px;
+  }
+  &__logo {
+    grid-area: logo;
+  }
+  &__nav {
+    grid-area: nav;
+    align-self: end;
+    .nav-menu {
+      &__item {
+        position: relative;
+        height: fit-content;
+        a {
+          display: block;
+          font-style: normal;
+          font-weight: 600;
+          font-size: 24px;
+          line-height: 29px;
+          /* identical to box height */
+          letter-spacing: 1.5px;
+          text-transform: uppercase;
+
+          color: #ffffff;
+          &::after {
+            content: "";
+            display: block;
+            position: absolute;
+            bottom: -4px;
+            height: 2px;
+            width: 78px;
+            left: 0;
+            background: $accent-color;
+            transition: 0.3s;
+          }
+          &:hover {
+            &::after {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+  &__socials {
+    grid-area: links;
+    width: fit-content;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 36px 52px;
+    a {
+      font-style: normal;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 24px;
+
+      color: #ffffff;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      img {
+        margin-right: 12px;
+      }
+    }
+  }
+  &__tags {
+    grid-area: tags;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 22px;
+    li {
+      a {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 24px;
+        text-transform: uppercase;
+
+        color: #ffffff;
+      }
+    }
+  }
+  &__copyright {
+    grid-area: copy;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+    color: #ffffff;
+    justify-self: center;
+  }
+}

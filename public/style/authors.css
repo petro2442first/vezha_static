@@ -1,0 +1,94 @@
+.authors {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  max-width: 1380px;
+  margin-bottom: 60px;
+}
+.authors__title {
+  font-style: normal;
+  font-weight: 800;
+  font-size: 28px;
+  line-height: 33px;
+  color: #231f20;
+  align-self: flex-start;
+}
+.authors__list {
+  max-width: 1380px;
+}
+.authors__list .swiper {
+  max-width: 1380px;
+  position: relative;
+  padding-bottom: 108px;
+  padding-top: 50px;
+}
+.authors__list .swiper .swiper-button-prev,
+.authors__list .swiper .swiper-button-next {
+  top: calc(100% - 19px);
+  background-image: url(../assets/images/red_arrow.svg);
+  background-position: center center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 38px;
+  height: 38px;
+}
+.authors__list .swiper .swiper-button-prev::after,
+.authors__list .swiper .swiper-button-next::after {
+  content: none;
+}
+.authors__list .swiper .swiper-button-prev {
+  transform: rotate(180deg);
+  left: calc(50% - 57px);
+}
+.authors__list .swiper .swiper-button-next {
+  right: calc(50% - 57px);
+}
+.authors__list .swiper .swiper-slide:nth-child(2n) .author__thumbnail::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: -37px;
+  top: -47px;
+  width: 105px;
+  height: 97.65px;
+  background-image: url(../assets/images/branded_circle.svg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: -1;
+}
+.authors__list .swiper .swiper-slide:nth-child(4n) .author__thumbnail::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: calc(100% - 27px);
+  top: calc(100% - 88px);
+  width: 105px;
+  height: 98px;
+  background-image: url(../assets/images/branded_circle.svg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: -1;
+  transform: rotate(93.76deg);
+}
+
+.author__thumbnail {
+  position: relative;
+}
+.author__title {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 24px;
+  color: #231f20;
+  margin-top: 15px;
+}
+.author__description {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 25px;
+  color: #231f20;
+}/*# sourceMappingURL=authors.css.map */
