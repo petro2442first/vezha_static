@@ -1,11 +1,27 @@
 .tags-menu {
   width: 100%;
-  background-color: $accent-color;
-  padding: 6px 20px -2px 20px;
 
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: 0.3s;
+  overflow: hidden;
+  transform-origin: 0 0;
+
+  &__container {
+    width: 100%;
+    background-color: $accent-color;
+    padding: 6px 20px -2px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &.sticky {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1;
+    }
+  }
   &__list {
     display: flex;
     justify-content: flex-start;
@@ -39,6 +55,7 @@
   display: flex;
   justify-content: center;
   align-items: flex-start;
+  position: relative;
   &__articles {
     display: flex;
     flex-direction: column;
@@ -49,6 +66,14 @@
   &__sidebar {
     max-width: 380px;
     margin-left: 123px;
+    height: fit-content;
+    will-change: min-height;
+    .inner-wrapper-sticky {
+      transform: translate(0, 0); /* For browsers don't support translate3d. */
+      transform: translate3d(0, 0, 0);
+      will-change: position, transform;
+      bottom: 60px;
+    }
   }
   &__title {
     position: relative;

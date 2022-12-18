@@ -609,6 +609,7 @@ template {
   padding: 0;
   box-sizing: border-box;
   font-family: "Proxima Nova";
+  transition: 0.3s;
 }
 
 html {
@@ -776,11 +777,26 @@ ul {
 
 .tags-menu {
   width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+  overflow: hidden;
+  transform-origin: 0 0;
+}
+.tags-menu__container {
+  width: 100%;
   background-color: #eb3a2d;
   padding: 6px 20px -2px 20px;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.tags-menu__container.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
 }
 .tags-menu__list {
   display: flex;
@@ -810,6 +826,7 @@ ul {
   display: flex;
   justify-content: center;
   align-items: flex-start;
+  position: relative;
 }
 .blog__articles {
   display: flex;
@@ -821,6 +838,16 @@ ul {
 .blog__sidebar {
   max-width: 380px;
   margin-left: 123px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  will-change: min-height;
+}
+.blog__sidebar .inner-wrapper-sticky {
+  transform: translate(0, 0); /* For browsers don't support translate3d. */
+  transform: translate3d(0, 0, 0);
+  will-change: position, transform;
+  bottom: 60px;
 }
 .blog__title {
   position: relative;
@@ -1138,8 +1165,8 @@ ul {
   align-self: flex-start;
 }
 .authors__list {
-  max-width: 1380px;
   position: relative;
+  width: 100%;
 }
 .authors__list::before {
   content: "";
@@ -1157,7 +1184,7 @@ ul {
   transform: rotate(93.76deg);
 }
 .authors__list .swiper {
-  max-width: 1380px;
+  width: 100%;
   position: relative;
   padding: 50px 0px 108px 0px;
 }

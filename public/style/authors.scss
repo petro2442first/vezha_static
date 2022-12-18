@@ -15,8 +15,8 @@
     align-self: flex-start;
   }
   &__list {
-    max-width: 1380px;
     position: relative;
+    width: 100%;
     &::before {
       content: "";
       display: block;
@@ -33,7 +33,7 @@
       transform: rotate(93.76deg);
     }
     .swiper {
-      max-width: 1380px;
+      width: 100%;
       position: relative;
       padding: 50px 0px 108px 0px;
       &::before {
