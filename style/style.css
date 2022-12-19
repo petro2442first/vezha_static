@@ -796,7 +796,7 @@ ul {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 1;
+  z-index: 2;
 }
 .tags-menu__list {
   display: flex;
@@ -838,16 +838,40 @@ ul {
 .blog__sidebar {
   max-width: 380px;
   margin-left: 123px;
+  height: 100%;
+  width: 380px;
+  will-change: min-height;
+  position: relative;
+}
+.blog__sidebar .inner-wrapper-sticky {
+  position: absolute;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  will-change: min-height;
+  background-color: #fff;
+  padding-left: 60px;
+  padding-right: 5px;
+  z-index: 1;
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
-.blog__sidebar .inner-wrapper-sticky {
-  transform: translate(0, 0); /* For browsers don't support translate3d. */
-  transform: translate3d(0, 0, 0);
-  will-change: position, transform;
-  bottom: 60px;
+.blog__sidebar .inner-wrapper-sticky::-webkit-scrollbar {
+  width: 5px;
+}
+.blog__sidebar .inner-wrapper-sticky::-webkit-scrollbar-button {
+  display: none;
+}
+.blog__sidebar .inner-wrapper-sticky::-webkit-scrollbar-track {
+  background: transparent;
+}
+.blog__sidebar .inner-wrapper-sticky::-webkit-scrollbar-thumb {
+  background: rgba(35, 31, 32, 0.6);
+  border-radius: 5px;
+}
+.blog__sidebar .inner-wrapper-sticky.scroll {
+  position: fixed;
+  top: 0;
 }
 .blog__title {
   position: relative;
@@ -1008,12 +1032,12 @@ ul {
 }
 
 .sidebar-title {
-  position: relative;
   font-family: "Proxima Nova";
   font-style: normal;
   font-weight: 700;
   font-size: 26px;
   line-height: 27px;
+  position: relative;
   color: #1e1e1e;
   margin-top: 30px;
 }

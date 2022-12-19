@@ -19,7 +19,7 @@
       position: fixed;
       top: 0;
       left: 0;
-      z-index: 1;
+      z-index: 2;
     }
   }
   &__list {
@@ -66,13 +66,45 @@
   &__sidebar {
     max-width: 380px;
     margin-left: 123px;
-    height: fit-content;
+    height: 100%;
+    width: 380px;
     will-change: min-height;
+    position: relative;
+    // .inner-wrapper-sticky {
+    //   transform: translate(0, 0); /* For browsers don't support translate3d. */
+    //   transform: translate3d(0, 0, 0);
+    //   will-change: position, transform;
+    //   bottom: 60px;
+    // }
     .inner-wrapper-sticky {
-      transform: translate(0, 0); /* For browsers don't support translate3d. */
-      transform: translate3d(0, 0, 0);
-      will-change: position, transform;
-      bottom: 60px;
+      position: absolute;
+      height: fit-content;
+      background-color: $secondary-color;
+      padding-left: 60px;
+      padding-right: 5px;
+      z-index: 1;
+      height: 100vh;
+      overflow-y: auto;
+
+      overflow-x: hidden;
+      &::-webkit-scrollbar {
+        // display: none;
+        width: 5px;
+      }
+      &::-webkit-scrollbar-button {
+        display: none;
+      }
+      &::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      &::-webkit-scrollbar-thumb {
+        background: rgba($primary-color, 0.6);
+        border-radius: 5px;
+      }
+      &.scroll {
+        position: fixed;
+        top: 0;
+      }
     }
   }
   &__title {
@@ -242,13 +274,12 @@
 }
 
 .sidebar-title {
-  position: relative;
   font-family: "Proxima Nova";
   font-style: normal;
   font-weight: 700;
   font-size: 26px;
   line-height: 27px;
-
+  position: relative;
   color: $title-color;
   margin-top: 30px;
   &::before {
