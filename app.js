@@ -74,7 +74,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
       if (scrollTop >= sidebarTop) {
         stickyWrapper.classList.add("scroll");
         stickyWrapper.style = `
-        right: ${blog.offsetLeft - 40}px;
+        right: ${blog.offsetLeft - 50}px;
         padding-top: ${tagsMenu.clientHeight + 10}px;
         width: ${sidebar.clientWidth + 75}px;
         `;
