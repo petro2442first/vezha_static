@@ -616,6 +616,9 @@ html {
   width: 100%;
   overflow-x: hidden;
 }
+html::-webkit-scrollbar {
+  display: none;
+}
 
 body {
   width: 100%;
