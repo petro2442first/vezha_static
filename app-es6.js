@@ -39,7 +39,7 @@ function authorsSlider() {
 document.addEventListener("DOMContentLoaded", (e) => {
   authorsSlider();
   const tagsMenu = document.querySelector(".tags-menu");
-  tagsMenuContainer = tagsMenu.querySelector(".tags-menu__container");
+  const tagsMenuContainer = tagsMenu.querySelector(".tags-menu__container");
   tagsMenu.style = `height: ${tagsMenuContainer.clientHeight}px`;
   const blog = document.querySelector(".blog");
   const sidebar = document.querySelector(".blog__sidebar") ?? null;
@@ -67,7 +67,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
     if (stickyWrapper !== null) {
       const sidebarTop = header.clientHeight + tagsMenu.clientHeight + 47;
 
-      blogBottom =
+      const blogBottom =
         header.clientHeight + tagsMenu.clientHeight + blog.clientHeight;
       if (scrollTop >= sidebarTop) {
         stickyWrapper.classList.add("scroll");
