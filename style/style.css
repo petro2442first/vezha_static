@@ -851,6 +851,7 @@ ul {
   background-color: #fff;
   padding-left: 60px;
   padding-right: 5px;
+  padding-bottom: 10px;
   z-index: 1;
   height: 100vh;
   overflow-y: auto;
