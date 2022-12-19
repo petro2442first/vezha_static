@@ -1184,6 +1184,7 @@ ul {
   justify-content: flex-start;
   max-width: 1380px;
   margin-bottom: 60px;
+  padding: 0 20px;
 }
 .authors__title {
   font-style: normal;
@@ -1389,4 +1390,10 @@ ul {
   line-height: 25px;
   color: #ffffff;
   justify-self: center;
+}
+
+@media screen and (max-width: 1380px) {
+  .authors {
+    max-width: 100%;
+  }
 }/*# sourceMappingURL=style.css.map */

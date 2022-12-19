@@ -57,6 +57,10 @@ ul {
 @import "./blog.scss";
 @import "./authors.scss";
 @import "./footer.scss";
-
+@media screen and (max-width: 1380px) {
+  .authors {
+    max-width: 100%;
+  }
+}
 @media screen and (max-width: 1440px) {
 }

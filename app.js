@@ -30,7 +30,7 @@ function authorsSlider() {
         spaceBetween: 10,
       },
       1240: {
-        spaceBetween: 30,
+        spaceBetween: 15,
         slidesPerView: 4,
       },
       1440: {
@@ -83,7 +83,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
       if (scrollTop >= sidebarTop) {
         stickyWrapper.classList.add("scroll");
         stickyWrapper.style = `
-        
+        right: ${blog.offsetLeft - 50}px;
         padding-top: ${tagsMenu.clientHeight + 10}px;
         width: ${sidebar.clientWidth + 75}px;
         `;

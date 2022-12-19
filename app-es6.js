@@ -25,7 +25,7 @@ function authorsSlider() {
         spaceBetween: 10,
       },
       1240: {
-        spaceBetween: 30,
+        spaceBetween: 15,
         slidesPerView: 4,
       },
       1440: {
