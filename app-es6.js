@@ -1,13 +1,7 @@
-"use strict";
-
 function authorsSlider() {
-  var _document$querySelect;
-  const authorsContainer =
-    (_document$querySelect = document.querySelector(".authors")) !== null &&
-    _document$querySelect !== void 0
-      ? _document$querySelect
-      : null;
+  const authorsContainer = document.querySelector(".authors") ?? null;
   if (authorsContainer === null) return;
+
   const swiper = new Swiper(authorsContainer.querySelector(".swiper"), {
     speed: 500,
     slidesPerView: 4,
@@ -16,6 +10,7 @@ function authorsSlider() {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
     },
+
     breakpoints: {
       320: {
         slidesPerView: 2,
@@ -40,23 +35,15 @@ function authorsSlider() {
     },
   });
 }
+
 document.addEventListener("DOMContentLoaded", (e) => {
-  var _document$querySelect2, _sidebar$querySelecto;
   authorsSlider();
   const tagsMenu = document.querySelector(".tags-menu");
   tagsMenuContainer = tagsMenu.querySelector(".tags-menu__container");
   tagsMenu.style = `height: ${tagsMenuContainer.clientHeight}px`;
   const blog = document.querySelector(".blog");
-  const sidebar =
-    (_document$querySelect2 = document.querySelector(".blog__sidebar")) !==
-      null && _document$querySelect2 !== void 0
-      ? _document$querySelect2
-      : null;
-  const stickyWrapper =
-    (_sidebar$querySelecto = sidebar.querySelector(".inner-wrapper-sticky")) !==
-      null && _sidebar$querySelecto !== void 0
-      ? _sidebar$querySelecto
-      : null;
+  const sidebar = document.querySelector(".blog__sidebar") ?? null;
+  const stickyWrapper = sidebar.querySelector(".inner-wrapper-sticky") ?? null;
   if (sidebar !== null) {
     sidebar.style = `height: ${blog.clientHeight}px`;
   }
@@ -76,8 +63,10 @@ document.addEventListener("DOMContentLoaded", (e) => {
     } else {
       tagsMenuContainer.classList.remove("sticky");
     }
+
     if (stickyWrapper !== null) {
       const sidebarTop = header.clientHeight + tagsMenu.clientHeight + 47;
+
       blogBottom =
         header.clientHeight + tagsMenu.clientHeight + blog.clientHeight;
       if (scrollTop >= sidebarTop) {
