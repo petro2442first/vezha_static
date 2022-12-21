@@ -56,11 +56,253 @@ ul {
 @import "./header.scss";
 @import "./blog.scss";
 @import "./authors.scss";
+@import "./single.scss";
+@import "./contacts.scss";
+@import "./profile.scss";
 @import "./footer.scss";
+@media screen and (max-width: 1500px) {
+  .header {
+    &__socials {
+      margin-left: 40px;
+      gap: 15px;
+    }
+  }
+  .nav-menu {
+    gap: 25px;
+  }
+  .blog {
+    &__sidebar {
+      margin-left: 50px;
+    }
+  }
+  .article-item {
+    &__grid {
+      grid-template-areas:
+        "auth date img"
+        "title title img"
+        "desc desc img"
+        "link tags tags";
+    }
+  }
+}
+
 @media screen and (max-width: 1380px) {
   .authors {
     max-width: 100%;
   }
 }
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: 1240px) {
+  .header {
+    .burger {
+      display: block;
+    }
+    &__container {
+      width: 100%;
+    }
+    &__socials {
+      padding-top: 0;
+    }
+    &__login-btns {
+      padding-top: 0;
+    }
+  }
+  .nav-menu {
+    position: fixed;
+    top: 0;
+    left: -230px;
+    width: 230px;
+    height: 100vh;
+    transition: 0.3s;
+    z-index: 99;
+    grid-auto-flow: row;
+    background-image: url(../assets/images/mobile_menu_bg.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    align-content: start;
+    padding: 20px;
+    &.open {
+      left: 0;
+      .nav-menu__close {
+        &::before {
+          display: block;
+        }
+      }
+    }
+    &__close {
+      display: block;
+      width: 24px;
+      height: 24px;
+      background: none;
+      border: 0;
+      margin-bottom: 15px;
+      &::before {
+        content: "";
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+      }
+    }
+  }
+  .blog {
+    flex-direction: column;
+    &__articles {
+      max-width: 768px;
+      width: auto;
+    }
+    &__single {
+      max-width: 768px;
+      width: auto;
+    }
+    &__sidebar {
+      width: 100%;
+      margin-left: 0;
+      max-width: 768px;
+      .inner-wrapper-sticky {
+        position: static;
+        height: auto;
+      }
+    }
+  }
+  .article-item {
+    &__grid {
+      gap: 5px;
+    }
+  }
+  .footer {
+    &__container {
+      gap: 40px 10px;
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        "logo"
+        "nav"
+        "tags"
+        "links"
+        "copy";
+    }
+    &__logo {
+      justify-self: center;
+    }
+    &__nav {
+      justify-self: center;
+    }
+    &__tags {
+      justify-self: center;
+    }
+    &__socials {
+      justify-self: center;
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .header {
+    &__socials {
+      display: none;
+    }
+    &__login-btns {
+      margin-left: 25px;
+      a {
+        &.register-btn {
+          display: none;
+        }
+      }
+    }
+    &__logo {
+      height: auto;
+    }
+  }
+  .article-item {
+    &__grid {
+      grid-template-areas:
+        "auth date img"
+        "title title img"
+        "desc desc img"
+        "link link tags";
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .tags-menu {
+    &__container {
+      padding: 6px 10px -2px 10px;
+    }
+  }
+  .blog {
+    padding: 47px 10px 111px 10px;
+    &__title {
+      padding-left: 0;
+      &::before {
+        left: -30px;
+        top: 30px;
+      }
+    }
+    &__sidebar {
+      .inner-wrapper-sticky {
+        padding-left: 0;
+        padding-right: 0;
+        padding-bottom: 0;
+        overflow-x: auto;
+      }
+    }
+  }
+  .sidebar-title {
+    &:first-child {
+      margin-top: 70px;
+    }
+  }
+  .article-item {
+    padding: 15px 10px;
+    &:hover {
+      transform: none;
+    }
+    &__grid {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto 20px auto auto 20px auto;
+      gap: 10px;
+      grid-template-areas:
+        "img   img"
+        "auth  date"
+        "title title"
+        "desc  desc"
+        "tags  tags"
+        "link  link";
+    }
+    &__thumbnail {
+      width: 100%;
+      height: auto;
+      margin-left: 0;
+    }
+    &__tags {
+      justify-content: start;
+    }
+  }
+  .footer {
+    &__container {
+      gap: 45px;
+    }
+    &__logo {
+      justify-self: start;
+    }
+    &__nav {
+      justify-self: start;
+      grid-auto-flow: row;
+      a {
+        width: fit-content;
+      }
+    }
+    &__tags {
+      justify-self: start;
+      grid-template-columns: repeat(3, 1fr);
+    }
+    &__socials {
+      justify-self: start;
+      grid-template-columns: 1fr;
+    }
+  }
 }

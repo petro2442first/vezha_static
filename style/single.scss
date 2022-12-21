@@ -1,0 +1,286 @@
+.article-page {
+  max-width: 860px;
+  &__title {
+    font-family: "Commissioner";
+    font-style: normal;
+    font-weight: 800;
+    font-size: 26px;
+    line-height: 35px;
+
+    color: #1e1e1e;
+  }
+  &__container {
+    padding: 20px 35px 30px 35px;
+    background: #ffffff;
+    border: 1px solid #ffffff;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+  }
+  &__info {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-areas:
+      "img auth"
+      "img date";
+    justify-content: start;
+    gap: 5px 10px;
+    margin-bottom: 15px;
+  }
+  &__author {
+    grid-area: auth;
+    font-family: "Commissioner";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    text-decoration-line: underline;
+
+    color: #eb3a2d;
+  }
+  &__published-at {
+    grid-area: date;
+    font-family: "Commissioner";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+
+    color: #3a3a3a;
+  }
+  &__avatar {
+    grid-area: img;
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+    border-radius: 40px;
+    img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+    }
+  }
+  &__content {
+    p {
+      font-family: "Commissioner";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 22px;
+
+      color: #231f20;
+      & + p {
+        margin-top: 20px;
+      }
+    }
+    img {
+      margin-top: 60px;
+      width: 100%;
+      object-fit: contain;
+      object-position: center center;
+    }
+    a {
+      color: $accent-color;
+      text-decoration: none;
+      font-family: "Commissioner";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 22px;
+    }
+    h3 {
+      font-weight: bold;
+      font-family: "Commissioner";
+      font-style: normal;
+      font-size: 18px;
+      line-height: 22px;
+
+      color: #231f20;
+      padding: 25px 0;
+    }
+  }
+  &__bottom-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 40px;
+  }
+  &__tags {
+    display: grid;
+    grid-auto-flow: column;
+    gap: 14px;
+    p {
+      font-family: "Proxima Nova";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 17px;
+      /* identical to box height */
+
+      color: #1b1717;
+    }
+    a {
+      font-family: "Proxima Nova";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 12px;
+      line-height: 15px;
+      /* identical to box height */
+
+      color: #5f5f5f;
+      background: #eaeaea;
+      padding: 4px 10px;
+    }
+  }
+  &__views {
+    position: relative;
+    font-family: "Proxima Nova";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    /* identical to box height */
+
+    color: #838383;
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: calc(50% - 6px);
+      right: calc(100% + 1px);
+      width: 12px;
+      height: 12px;
+      background-image: url(../assets/images/views.svg);
+      background-position: center center;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+  }
+  &__btns {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 25px;
+    margin-bottom: 30px;
+    a {
+      display: block;
+      position: relative;
+      font-family: "Proxima Nova";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 17px;
+      /* identical to box height */
+
+      color: #1b1717;
+      &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        right: calc(100% + 10px);
+        top: calc(50% - 10px);
+        height: 20px;
+        width: 20px;
+        // background-image: url(../assets/images/);
+        background-position: center center;
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+      &.save {
+        &::before {
+          background-image: url(../assets/images/icons/bookmarks.svg);
+        }
+      }
+      &.comment {
+        &::before {
+          background-image: url(../assets/images/icons/edit.svg);
+        }
+      }
+      &.share {
+        &::before {
+          background-image: url(../assets/images/icons/share.svg);
+        }
+      }
+    }
+  }
+}
+.comments {
+  &__title {
+    font-family: "Proxima Nova";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    /* identical to box height */
+
+    color: #1b1717;
+    margin-bottom: 20px;
+  }
+
+  &__item {
+    display: grid;
+    grid-template-columns: 36px auto;
+    grid-template-areas:
+      "img name"
+      "img text";
+    gap: 5px 10px;
+    padding: 15px 20px;
+    background: #ffffff;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+    & + div {
+      margin-top: 15px;
+    }
+  }
+  &__avatar {
+    grid-area: img;
+    width: 36px;
+    height: 36px;
+    overflow: hidden;
+    border-radius: 36px;
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &__name {
+    grid-area: name;
+    font-family: "Commissioner";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
+
+    color: #231f20;
+  }
+  &__text {
+    grid-area: text;
+    font-family: "Commissioner";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 19px;
+    letter-spacing: 0.01em;
+
+    color: #1b1717;
+  }
+  &__load-more {
+    font-family: "Proxima Nova";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    /* identical to box height */
+
+    text-align: center;
+
+    color: #1b1717;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-top: 25px;
+  }
+}

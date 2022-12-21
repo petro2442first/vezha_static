@@ -1,0 +1,129 @@
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.profile__container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 80px 40px;
+  background: #ffffff;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+  max-width: 1380px;
+  gap: 60px;
+}
+.profile__col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.profile__info h3 {
+  font-family: "Commissioner";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 33px;
+  /* identical to box height */
+  color: #1b1717;
+  margin-bottom: 15px;
+}
+.profile__info form {
+  display: grid;
+  grid-auto-flow: row;
+  gap: 20px;
+}
+.profile__group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+.profile__group label {
+  font-family: "Proxima Nova";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #959595;
+}
+.profile__group input,
+.profile__group textarea {
+  font-family: "Proxima Nova";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  /* identical to box height */
+  color: #1b1717;
+  border: 1px solid #959595;
+  padding: 18px 30px;
+  width: 100%;
+}
+.profile__group textarea {
+  resize: vertical;
+}
+.profile__publications h3 {
+  font-family: "Commissioner";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 33px;
+  /* identical to box height */
+  color: #1b1717;
+}
+.profile__title p {
+  font-family: "Commissioner";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 33px;
+  /* identical to box height */
+  color: #1b1717;
+}
+.profile__title h2 {
+  font-family: "Commissioner";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 36px;
+  line-height: 49px;
+  color: #1b1717;
+}
+.profile__avatar {
+  width: 375px;
+  height: 375px;
+  border-radius: 375px;
+  overflow: hidden;
+}
+.profile__avatar img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.profile__change-avatar {
+  align-self: center;
+  font-family: "Commissioner";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 0.01em;
+  color: #1b1717;
+  border: 1px solid #000000;
+  padding: 10px 24px;
+  margin-top: 15px;
+}
+.profile__exit-btn {
+  margin-top: 40px;
+  font-family: "Commissioner";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 22px;
+  /* identical to box height */
+  color: #231f20;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}/*# sourceMappingURL=profile.css.map */

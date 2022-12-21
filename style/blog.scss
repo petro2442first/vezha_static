@@ -26,7 +26,22 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    flex-wrap: wrap;
+    // flex-wrap: wrap;
+    overflow-x: auto;
+    &::-webkit-scrollbar {
+      // display: none;
+      height: 5px;
+    }
+    &::-webkit-scrollbar-button {
+      display: none;
+    }
+    &::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: rgba($primary-color, 0.6);
+      border-radius: 5px;
+    }
   }
   &__item {
     margin: 10px 20px;
@@ -59,8 +74,26 @@
   &__articles {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     justify-content: flex-start;
+    max-width: 860px;
+
+    width: calc(40vw + 169px);
+  }
+  &__ratings {
+    max-width: 860px;
+
+    width: calc(40vw + 169px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__authors {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__single {
     max-width: 860px;
     width: calc(40vw + 169px);
   }
@@ -79,7 +112,6 @@
     // }
     .inner-wrapper-sticky {
       position: absolute;
-      height: fit-content;
       background-color: $secondary-color;
       padding-left: 60px;
       padding-right: 5px;
@@ -87,7 +119,8 @@
       z-index: 1;
       height: 100vh;
       overflow-y: auto;
-
+      width: 380px;
+      // width: 100%;
       overflow-x: hidden;
       &::-webkit-scrollbar {
         // display: none;
@@ -107,18 +140,25 @@
         position: fixed;
         top: 0;
       }
+      &.no-sticky {
+        height: auto;
+        position: relative;
+        width: auto !important;
+        padding-top: 0 !important;
+        right: 0 !important;
+      }
     }
   }
   &__title {
     position: relative;
     padding-left: 55px;
     margin-bottom: 24px;
-    font-family: "Proxima Nova";
+    font-family: "Commissioner";
     font-style: normal;
-    font-weight: 800;
+    font-weight: 700;
     font-size: 32px;
     line-height: 35px;
-
+    align-self: flex-start;
     color: $title-color;
     &::before {
       content: "";
@@ -149,7 +189,18 @@
     margin-top: 14px;
   }
 
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr) 260px;
+    grid-template-rows: 20px auto auto 20px;
+    grid-template-areas:
+      "auth date img"
+      "title title img"
+      "desc desc img"
+      "link tags img";
+  }
   &__thumbnail {
+    grid-area: img;
     margin-left: 45px;
     height: 185px;
     width: 260px;
@@ -162,19 +213,9 @@
       object-position: center center;
     }
   }
-  &__grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 20px auto auto 20px;
-    grid-template-areas:
-      "auth date"
-      "title title"
-      "desc desc"
-      "link tags";
-  }
   &__author {
     grid-area: auth;
-    font-family: "Proxima Nova";
+    font-family: "Commissioner";
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
@@ -185,7 +226,7 @@
   }
   &__published-at {
     grid-area: date;
-    font-family: "Proxima Nova";
+    font-family: "Commissioner";
     font-style: normal;
     font-weight: 400;
     font-size: 12px;
@@ -196,7 +237,7 @@
   }
   &__title {
     grid-area: title;
-    font-family: "Proxima Nova";
+    font-family: "Commissioner";
     font-style: normal;
     font-weight: 700;
     font-size: 24px;
@@ -207,7 +248,7 @@
   }
   &__excerpt {
     grid-area: desc;
-    font-family: "Proxima Nova";
+    font-family: "Commissioner";
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
@@ -219,7 +260,7 @@
   }
   &__link {
     grid-area: link;
-    font-family: "Proxima Nova";
+    font-family: "Commissioner";
     font-style: normal;
     font-weight: 500;
     font-size: 14px;
@@ -253,7 +294,7 @@
   }
 }
 .load-more-btn {
-  margin-top: 10px;
+  margin-top: 50px;
   align-self: center;
   background: $accent-color;
   border: 1px solid $accent-color;
@@ -276,7 +317,7 @@
 }
 
 .sidebar-title {
-  font-family: "Proxima Nova";
+  font-family: "Commissioner";
   font-style: normal;
   font-weight: 700;
   font-size: 26px;
@@ -311,6 +352,7 @@
   }
   padding: 6px 10px;
   &__excerpt {
+    font-family: "Commissioner";
     font-style: normal;
     font-weight: 500;
     font-size: 13px;
@@ -385,16 +427,35 @@
 
 .media-ratings {
   a {
+    display: block;
+    position: relative;
     margin-top: 12px;
+    width: 100%;
+    img {
+      width: 100%;
+      object-fit: contain;
+      display: block;
+    }
   }
 }
 
 .youtube {
   &__video {
     margin-top: 6px;
+    width: 100%;
+    position: relative;
     iframe {
-      width: 372px;
-      height: 210px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: auto;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+    }
+    .p-5625 {
+      padding-top: 56.25%;
     }
   }
 }
@@ -409,6 +470,7 @@
       margin-top: 14px;
     }
     &__excerpt {
+      font-family: "Commissioner";
       font-style: normal;
       font-weight: 500;
       font-size: 13px;

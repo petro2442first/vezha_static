@@ -291,4 +291,9 @@
   src: local("Proxima Nova Black Italic"), local("../assets/fonts/ProximaNova-BlackIt"), url("../assets/fonts/ProximaNova-BlackIt.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/ProximaNova-BlackIt.woff") format("woff"), url("../assets/fonts/ProximaNova-BlackIt.ttf") format("truetype");
   font-weight: 900;
   font-style: italic;
+}
+@font-face {
+  font-family: "Commissioner";
+  src: url("../assets/fonts/Commissioner.ttf");
+  src: local("Commissioner"), local("../assets/fonts/Commissioner"), url("../assets/fonts/Commissioner.ttf") format("truetype");
 }/*# sourceMappingURL=fonts.css.map */

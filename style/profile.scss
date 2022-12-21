@@ -1,0 +1,201 @@
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 80px 40px;
+    background: #ffffff;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+    max-width: 1380px;
+    gap: 60px;
+  }
+  &__col {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  &__info {
+    h3 {
+      font-family: "Commissioner";
+      font-style: normal;
+      font-weight: 800;
+      font-size: 24px;
+      line-height: 33px;
+      /* identical to box height */
+
+      color: #1b1717;
+      margin-bottom: 15px;
+    }
+    form {
+      display: grid;
+      grid-auto-flow: row;
+      gap: 20px;
+    }
+  }
+  &__group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    label {
+      font-family: "Proxima Nova";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 19px;
+
+      color: #959595;
+    }
+    input,
+    textarea {
+      font-family: "Proxima Nova";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 22px;
+      /* identical to box height */
+
+      color: #1b1717;
+      border: 1px solid #959595;
+      padding: 18px 30px;
+      width: 100%;
+    }
+    textarea {
+      resize: vertical;
+    }
+  }
+  &__save {
+    width: 100%;
+    button {
+      width: 100%;
+      font-family: "Proxima Nova";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 22px;
+      /* identical to box height */
+
+      text-align: center;
+
+      color: #ffffff;
+      padding: 18px;
+      background: $primary-color;
+      border: 1px solid $primary-color;
+      transition: 0.3s;
+      cursor: pointer;
+      &:hover {
+        background: transparent;
+        color: $primary-color;
+      }
+    }
+  }
+  &__publications {
+    h3 {
+      font-family: "Commissioner";
+      font-style: normal;
+      font-weight: 800;
+      font-size: 24px;
+      line-height: 33px;
+      /* identical to box height */
+
+      color: #1b1717;
+      margin-bottom: 30px;
+    }
+    .pub {
+      display: grid;
+      grid-auto-flow: row;
+      gap: 24px;
+      overflow-x: hidden;
+      overflow-y: auto;
+      max-height: 500px;
+      &::-webkit-scrollbar {
+        width: 5px;
+      }
+      &::-webkit-scrollbar-button {
+        display: none;
+      }
+      &::-webkit-scrollbar-track {
+        background: #efefef;
+        border-radius: 5px;
+      }
+      &::-webkit-scrollbar-thumb {
+        background: rgba($primary-color, 0.6);
+        border-radius: 5px;
+      }
+      &__item {
+        font-family: "Commissioner";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 15px;
+        line-height: 20px;
+        text-decoration-line: underline;
+
+        color: #2124a8;
+      }
+    }
+  }
+  &__title {
+    p {
+      font-family: "Commissioner";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 33px;
+      /* identical to box height */
+
+      color: #1b1717;
+    }
+    h2 {
+      font-family: "Commissioner";
+      font-style: normal;
+      font-weight: 800;
+      font-size: 36px;
+      line-height: 49px;
+
+      color: #1b1717;
+    }
+  }
+  &__avatar {
+    width: 375px;
+    height: 375px;
+    border-radius: 375px;
+    overflow: hidden;
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &__change-avatar {
+    align-self: center;
+    font-family: "Commissioner";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: 0.01em;
+
+    color: #1b1717;
+    border: 1px solid #000000;
+    padding: 10px 24px;
+    margin-top: 15px;
+  }
+  &__exit-btn {
+    margin-top: 40px;
+    font-family: "Commissioner";
+    font-style: normal;
+    font-weight: 800;
+    font-size: 16px;
+    line-height: 22px;
+    /* identical to box height */
+
+    color: #231f20;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

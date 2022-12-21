@@ -1,0 +1,79 @@
+.contacts {
+  &__container {
+    background: #ffffff;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+    padding: 25px 60px;
+    padding-bottom: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  &__phone {
+    font-family: "Commissioner";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: 0.01em;
+
+    color: #1b1717;
+    a {
+      font-family: "Commissioner";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 24px;
+      letter-spacing: 0.01em;
+
+      color: #1b1717;
+    }
+  }
+  &__email {
+    font-family: "Commissioner";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: 0.01em;
+
+    color: #1b1717;
+    a {
+      font-family: "Commissioner";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 24px;
+      letter-spacing: 0.01em;
+
+      color: $accent-color;
+    }
+  }
+  &__socials {
+    margin-top: 60px;
+    h3 {
+      font-family: "Commissioner";
+      font-style: normal;
+      font-weight: 800;
+      font-size: 20px;
+      line-height: 27px;
+
+      color: #1b1717;
+    }
+    div {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 25px 80px;
+    }
+    a {
+      font-family: "Commissioner";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 22px;
+      /* identical to box height */
+
+      color: #231f20;
+    }
+  }
+}
