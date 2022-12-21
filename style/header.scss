@@ -93,6 +93,49 @@
       }
     }
   }
+  &__profile {
+    display: grid;
+    grid-template-columns: 1fr 72px;
+    grid-template-areas:
+      "name img"
+      "link img";
+    margin-left: 80px;
+    gap: 5px;
+    h3 {
+      grid-area: name;
+      font-family: "Proxima Nova";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 24px;
+      text-align: right;
+
+      color: #1e1e1e;
+      align-self: end;
+      justify-self: end;
+    }
+    a {
+      grid-area: link;
+      font-family: "Proxima Nova";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 13px;
+      line-height: 16px;
+      /* identical to box height */
+
+      color: #1e1e1e;
+      align-self: start;
+      justify-self: end;
+    }
+    img {
+      grid-area: img;
+      width: 72px;
+      height: 72px;
+      object-fit: contain;
+      border-radius: 72px;
+      display: block;
+    }
+  }
 }
 .nav-menu {
   display: grid;
