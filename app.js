@@ -57,12 +57,7 @@ function burgerMenu() {
       null && _document$querySelect4 !== void 0
       ? _document$querySelect4
       : null;
-  if (
-    menu !== null &&
-    burger !== null &&
-    closeBtn !== null &&
-    screen.availWidth <= 1240
-  ) {
+  if (menu !== null && burger !== null && closeBtn !== null) {
     burger.addEventListener("click", (e) => {
       menu.classList.add("open");
     });
