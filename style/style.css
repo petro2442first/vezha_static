@@ -1793,6 +1793,8 @@ ul {
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
+  max-width: 860px;
+  width: 100%;
 }
 .contacts__phone {
   font-family: "Commissioner";
