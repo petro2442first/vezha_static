@@ -1,0 +1,229 @@
+.sign {
+  overflow: hidden;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 115px 165px;
+  height: 100%;
+  width: 100%;
+  &::before {
+    content: "";
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../assets/images/regsiter_bg.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -1;
+  }
+  &__container {
+    background: #ffffff;
+    padding: 35px 135px 65px 135px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 700px;
+    &.thanks {
+      height: 880px;
+      .sign__logo {
+        margin-bottom: 195px;
+      }
+    }
+  }
+  &__logo {
+    width: 205px;
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+  &__title {
+    font-family: "Commissioner";
+    font-style: normal;
+    font-weight: 800;
+    font-size: 26px;
+    line-height: 35px;
+    text-align: center;
+
+    color: #1b1717;
+    margin-top: 30px;
+  }
+  &__facebook {
+    margin-top: 35px;
+    width: 100%;
+    padding: 20px 30px;
+    font-family: "Commissioner";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    /* identical to box height */
+
+    color: #3e3b3c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #959595;
+    img {
+      margin-right: 10px;
+    }
+  }
+  &__separator {
+    margin-top: 20px;
+    font-family: "Commissioner";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    /* identical to box height */
+
+    text-align: right;
+
+    color: #231f20;
+  }
+  &__form {
+    margin-top: 20px;
+    width: 100%;
+    display: grid;
+    grid-auto-flow: row;
+    gap: 20px;
+  }
+  &__group {
+    input {
+      width: 100%;
+      padding: 20px;
+      border: 1px solid #959595;
+      font-family: "Commissioner";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 22px;
+      /* identical to box height */
+
+      color: #3e3b3c;
+      &::placeholder {
+        font-family: "Commissioner";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 22px;
+        /* identical to box height */
+
+        color: #c0c0c0;
+      }
+    }
+  }
+  &__remember {
+    label {
+      display: block;
+      position: relative;
+      font-family: "Commissioner";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 22px;
+      /* identical to box height */
+      padding-left: 30px;
+      color: #231f20;
+      user-select: none;
+      &::before {
+        content: "";
+        display: block;
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        top: calc(50% - 10px);
+        left: 0;
+        border: 1px solid #000;
+        background-position: center center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        transition: 0.3s;
+      }
+    }
+    input {
+      position: fixed;
+      top: -100vh;
+      &:checked {
+        & + label {
+          &::before {
+            background-image: url(../assets/images/icons/success.svg);
+          }
+        }
+      }
+    }
+  }
+  &__register {
+    font-family: "Commissioner";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    /* identical to box height */
+
+    text-align: center;
+
+    color: #ffffff;
+    padding: 20px 30px;
+    margin-top: 10px;
+    background: #231f20;
+    border: 1px solid #3f3b3c;
+    transition: 0.3s;
+    cursor: pointer;
+    &:hover {
+      background: transparent;
+      color: #3f3b3c;
+    }
+  }
+  &__login {
+    position: relative;
+    display: inline-block;
+    width: fit-content;
+    font-family: "Commissioner";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    /* identical to box height */
+
+    text-align: center;
+
+    color: #3f3b3c;
+    justify-self: center;
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      bottom: 0;
+      height: 2px;
+      width: 0;
+      right: 0;
+      background: #3f3b3c;
+      transition: 0.3s;
+    }
+    &:hover {
+      &::after {
+        width: 100%;
+        left: 0;
+      }
+    }
+  }
+  &__description {
+    font-family: "Commissioner";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    text-align: center;
+
+    color: #231f20;
+    margin-bottom: 30px;
+    margin-top: 30px;
+  }
+}

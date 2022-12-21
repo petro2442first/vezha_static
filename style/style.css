@@ -1071,7 +1071,7 @@ ul {
   font-family: "Commissioner";
   font-style: normal;
   font-weight: 400;
-  font-size: 18px;
+  font-size: 14px;
   line-height: 19px;
   color: #231f20;
   padding-top: 6px;
@@ -2042,6 +2042,239 @@ ul {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.sign {
+  overflow: hidden;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 115px 165px;
+  height: 100%;
+  width: 100%;
+}
+.sign::before {
+  content: "";
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(../assets/images/regsiter_bg.jpg);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+.sign__container {
+  background: #ffffff;
+  padding: 35px 135px 65px 135px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 700px;
+}
+.sign__container.thanks {
+  height: 880px;
+}
+.sign__container.thanks .sign__logo {
+  margin-bottom: 195px;
+}
+.sign__logo {
+  width: 205px;
+}
+.sign__logo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.sign__title {
+  font-family: "Commissioner";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 26px;
+  line-height: 35px;
+  text-align: center;
+  color: #1b1717;
+  margin-top: 30px;
+}
+.sign__facebook {
+  margin-top: 35px;
+  width: 100%;
+  padding: 20px 30px;
+  font-family: "Commissioner";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  /* identical to box height */
+  color: #3e3b3c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #959595;
+}
+.sign__facebook img {
+  margin-right: 10px;
+}
+.sign__separator {
+  margin-top: 20px;
+  font-family: "Commissioner";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  /* identical to box height */
+  text-align: right;
+  color: #231f20;
+}
+.sign__form {
+  margin-top: 20px;
+  width: 100%;
+  display: grid;
+  grid-auto-flow: row;
+  gap: 20px;
+}
+.sign__group input {
+  width: 100%;
+  padding: 20px;
+  border: 1px solid #959595;
+  font-family: "Commissioner";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  /* identical to box height */
+  color: #3e3b3c;
+}
+.sign__group input::-moz-placeholder {
+  font-family: "Commissioner";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  /* identical to box height */
+  color: #c0c0c0;
+}
+.sign__group input:-ms-input-placeholder {
+  font-family: "Commissioner";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  /* identical to box height */
+  color: #c0c0c0;
+}
+.sign__group input::placeholder {
+  font-family: "Commissioner";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  /* identical to box height */
+  color: #c0c0c0;
+}
+.sign__remember label {
+  display: block;
+  position: relative;
+  font-family: "Commissioner";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  /* identical to box height */
+  padding-left: 30px;
+  color: #231f20;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.sign__remember label::before {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: calc(50% - 10px);
+  left: 0;
+  border: 1px solid #000;
+  background-position: center center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  transition: 0.3s;
+}
+.sign__remember input {
+  position: fixed;
+  top: -100vh;
+}
+.sign__remember input:checked + label::before {
+  background-image: url(../assets/images/icons/success.svg);
+}
+.sign__register {
+  font-family: "Commissioner";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  /* identical to box height */
+  text-align: center;
+  color: #ffffff;
+  padding: 20px 30px;
+  margin-top: 10px;
+  background: #231f20;
+  border: 1px solid #3f3b3c;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.sign__register:hover {
+  background: transparent;
+  color: #3f3b3c;
+}
+.sign__login {
+  position: relative;
+  display: inline-block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-family: "Commissioner";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  /* identical to box height */
+  text-align: center;
+  color: #3f3b3c;
+  justify-self: center;
+}
+.sign__login::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  height: 2px;
+  width: 0;
+  right: 0;
+  background: #3f3b3c;
+  transition: 0.3s;
+}
+.sign__login:hover::after {
+  width: 100%;
+  left: 0;
+}
+.sign__description {
+  font-family: "Commissioner";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  text-align: center;
+  color: #231f20;
+  margin-bottom: 30px;
+  margin-top: 30px;
 }
 
 .footer {
