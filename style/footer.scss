@@ -11,7 +11,7 @@
       "logo  nav"
       "links tags"
       "copy copy";
-    gap: 47px 150px;
+    gap: 47px 194px;
   }
   &__logo {
     grid-area: logo;
@@ -21,7 +21,7 @@
     align-self: end;
     display: grid;
     grid-auto-flow: column;
-    gap: 20px 10px;
+    gap: 20px 80px;
     li {
       a {
         font-family: "Commissioner";

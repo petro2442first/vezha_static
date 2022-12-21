@@ -2053,7 +2053,7 @@ ul {
   display: grid;
   grid-template-columns: minmax(auto, 370px) auto;
   grid-template-areas: "logo  nav" "links tags" "copy copy";
-  gap: 47px 150px;
+  gap: 47px 194px;
 }
 .footer__logo {
   grid-area: logo;
@@ -2063,7 +2063,7 @@ ul {
   align-self: end;
   display: grid;
   grid-auto-flow: column;
-  gap: 20px 10px;
+  gap: 20px 80px;
 }
 .footer__nav li a {
   font-family: "Commissioner";
@@ -2156,9 +2156,20 @@ ul {
     grid-template-areas: "auth date img" "title title img" "desc desc img" "link tags tags";
   }
 }
+@media screen and (max-width: 1500px) {
+  .footer__nav {
+    gap: 20px 40px;
+  }
+}
 @media screen and (max-width: 1380px) {
   .authors {
     max-width: 100%;
+  }
+  .footer__container {
+    gap: 47px 100px;
+  }
+  .footer__nav {
+    gap: 20px 30px;
   }
 }
 @media screen and (max-width: 1240px) {

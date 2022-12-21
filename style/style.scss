@@ -85,10 +85,24 @@ ul {
     }
   }
 }
-
+@media screen and (max-width: 1500px) {
+  .footer {
+    &__nav {
+      gap: 20px 40px;
+    }
+  }
+}
 @media screen and (max-width: 1380px) {
   .authors {
     max-width: 100%;
+  }
+  .footer {
+    &__container {
+      gap: 47px 100px;
+    }
+    &__nav {
+      gap: 20px 30px;
+    }
   }
 }
 @media screen and (max-width: 1240px) {
