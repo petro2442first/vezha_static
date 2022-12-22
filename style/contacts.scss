@@ -9,7 +9,7 @@
     align-items: flex-start;
     justify-content: flex-start;
     max-width: 860px;
-    width: 100%;
+    width: 748px;
   }
   &__phone {
     font-family: "Commissioner";
@@ -76,6 +76,12 @@
       /* identical to box height */
 
       color: #231f20;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      img {
+        margin-right: 15px;
+      }
     }
   }
 }
