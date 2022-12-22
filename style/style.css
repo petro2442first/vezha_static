@@ -1583,9 +1583,9 @@ ul {
 .article-page__content p {
   font-family: "Commissioner";
   font-style: normal;
-  font-weight: 400;
+  font-weight: 600;
   font-size: 14px;
-  line-height: 22px;
+  line-height: 17px;
   color: #231f20;
 }
 .article-page__content p + p {
@@ -1604,16 +1604,16 @@ ul {
   text-decoration: none;
   font-family: "Commissioner";
   font-style: normal;
-  font-weight: 400;
+  font-weight: 600;
   font-size: 14px;
-  line-height: 22px;
+  line-height: 17px;
 }
 .article-page__content h3 {
   font-weight: bold;
   font-family: "Commissioner";
   font-style: normal;
-  font-size: 18px;
-  line-height: 22px;
+  font-size: 26px;
+  line-height: 32px;
   color: #231f20;
   padding: 25px 0;
 }
@@ -2447,6 +2447,17 @@ ul {
   }
 }
 @media screen and (max-width: 1240px) {
+  .profile__container {
+    padding: 40px 15px;
+    gap: 40px;
+  }
+  .profile__avatar {
+    width: 300px;
+    height: 300px;
+  }
+  .profile__change-avatar {
+    align-self: flex-start;
+  }
   .header .burger {
     display: block;
   }
@@ -2539,6 +2550,35 @@ ul {
   }
 }
 @media screen and (max-width: 900px) {
+  .profile__container {
+    padding: 40px 15px;
+    gap: 40px;
+    grid-template-columns: 1fr 1fr;
+  }
+  .profile__avatar {
+    width: 100px;
+    height: 100px;
+  }
+  .profile__change-avatar {
+    align-self: flex-start;
+  }
+  .profile__title p {
+    font-family: "Commissioner";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 33px;
+    /* identical to box height */
+    color: #1b1717;
+  }
+  .profile__title h2 {
+    font-family: "Commissioner";
+    font-style: normal;
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 49px;
+    color: #1b1717;
+  }
   .header__socials {
     display: none;
   }
@@ -2547,6 +2587,9 @@ ul {
   }
   .header__login-btns a.register-btn {
     display: none;
+  }
+  .header__profile {
+    margin-left: 25px;
   }
   .header__logo {
     height: auto;
@@ -2569,6 +2612,9 @@ ul {
   }
 }
 @media screen and (max-width: 768px) {
+  .profile__container {
+    grid-template-columns: 1fr;
+  }
   .sign {
     padding: 0;
     display: flex;

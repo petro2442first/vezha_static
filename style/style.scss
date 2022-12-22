@@ -131,6 +131,19 @@ ul {
   }
 }
 @media screen and (max-width: 1240px) {
+  .profile {
+    &__container {
+      padding: 40px 15px;
+      gap: 40px;
+    }
+    &__avatar {
+      width: 300px;
+      height: 300px;
+    }
+    &__change-avatar {
+      align-self: flex-start;
+    }
+  }
   .header {
     .burger {
       display: block;
@@ -236,6 +249,41 @@ ul {
 }
 
 @media screen and (max-width: 900px) {
+  .profile {
+    &__container {
+      padding: 40px 15px;
+      gap: 40px;
+      grid-template-columns: 1fr 1fr;
+    }
+    &__avatar {
+      width: 100px;
+      height: 100px;
+    }
+    &__change-avatar {
+      align-self: flex-start;
+    }
+    &__title {
+      p {
+        font-family: "Commissioner";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 33px;
+        /* identical to box height */
+
+        color: #1b1717;
+      }
+      h2 {
+        font-family: "Commissioner";
+        font-style: normal;
+        font-weight: 800;
+        font-size: 24px;
+        line-height: 49px;
+
+        color: #1b1717;
+      }
+    }
+  }
   .header {
     &__socials {
       display: none;
@@ -247,6 +295,9 @@ ul {
           display: none;
         }
       }
+    }
+    &__profile {
+      margin-left: 25px;
     }
     &__logo {
       height: auto;
@@ -277,6 +328,11 @@ ul {
 }
 
 @media screen and (max-width: 768px) {
+  .profile {
+    &__container {
+      grid-template-columns: 1fr;
+    }
+  }
   .sign {
     padding: 0;
     display: flex;
