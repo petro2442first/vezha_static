@@ -106,6 +106,20 @@ ul {
   align-items: center;
   width: fit-content;
   z-index: 9999;
+  &.to-top {
+    top: calc(50% - 150px);
+    a {
+      & + a {
+        margin-top: 30px;
+      }
+      &:last-child {
+        margin-top: 50px;
+        &::before {
+          bottom: calc(100% + 24px);
+        }
+      }
+    }
+  }
   a {
     display: block;
     position: relative;

@@ -81,7 +81,6 @@ document.addEventListener("DOMContentLoaded", (e) => {
   if (tagsMenu !== null && tagsMenuContainer !== null) {
     tagsMenu.style = `height: ${tagsMenuContainer.clientHeight}px`;
   }
-
   const blog = document.querySelector(".blog");
   const sidebar =
     (_document$querySelect5 = document.querySelector(".blog__sidebar")) !==
@@ -102,6 +101,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
     sidebar.style = ``;
   }
   window.addEventListener("scroll", (e) => {
+    var _document$querySelect6;
     const header = document.querySelector(".header");
     const scrollTop = document.documentElement.scrollTop;
     if (tagsMenu !== null && tagsMenuContainer !== null) {
@@ -111,7 +111,6 @@ document.addEventListener("DOMContentLoaded", (e) => {
         tagsMenuContainer.classList.remove("sticky");
       }
     }
-
     if (
       stickyWrapper !== null &&
       screen.availWidth > 1240 &&
@@ -129,6 +128,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
         `;
         // width: ${sidebar.clientWidth + 75}px;
       }
+
       if (scrollTop >= blogBottom - screen.availHeight) {
         stickyWrapper.classList.remove("scroll");
         stickyWrapper.style = `
@@ -155,6 +155,21 @@ document.addEventListener("DOMContentLoaded", (e) => {
       });
     } else {
       goTop.classList.remove("show");
+    }
+    const footer = document.querySelector(".footer");
+    const leftBar =
+      (_document$querySelect6 = document.querySelector(".left-bar")) !== null &&
+      _document$querySelect6 !== void 0
+        ? _document$querySelect6
+        : null;
+    console.log(scrollTop, document.body.clientHeight, footer.clientHeight);
+    if (
+      scrollTop >= document.body.clientHeight - footer.clientHeight - 1000 &&
+      leftBar !== null
+    ) {
+      leftBar.classList.add("to-top");
+    } else {
+      leftBar.classList.remove("to-top");
     }
   });
 });

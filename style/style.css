@@ -751,6 +751,18 @@ ul {
   width: fit-content;
   z-index: 9999;
 }
+.left-bar.to-top {
+  top: calc(50% - 150px);
+}
+.left-bar.to-top a + a {
+  margin-top: 30px;
+}
+.left-bar.to-top a:last-child {
+  margin-top: 50px;
+}
+.left-bar.to-top a:last-child::before {
+  bottom: calc(100% + 24px);
+}
 .left-bar a {
   display: block;
   position: relative;
@@ -1445,7 +1457,7 @@ ul {
   justify-content: flex-start;
   max-width: 1380px;
   margin-bottom: 60px;
-  padding: 0 20px;
+  padding: 0 100px;
 }
 .authors__title {
   font-family: "Commissioner";
