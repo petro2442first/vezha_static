@@ -144,5 +144,17 @@ document.addEventListener("DOMContentLoaded", (e) => {
     } else {
       stickyWrapper.classList.add("no-sticky");
     }
+    const goTop = document.querySelector(".scroll-top");
+    if (scrollTop >= screen.availHeight) {
+      goTop.classList.add("show");
+      goTop.addEventListener("click", (e) => {
+        document.documentElement.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      });
+    } else {
+      goTop.classList.remove("show");
+    }
   });
 });

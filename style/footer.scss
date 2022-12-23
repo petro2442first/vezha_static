@@ -87,8 +87,7 @@
         font-family: "Commissioner";
         font-style: normal;
         font-weight: 600;
-        font-size: 18px;
-        line-height: 24px;
+        @include adapt-font(18, 14);
         text-transform: uppercase;
 
         color: #ffffff;

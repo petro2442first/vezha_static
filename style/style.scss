@@ -53,6 +53,44 @@ ul {
   align-items: center;
 }
 
+.scroll-top {
+  position: fixed;
+  width: fit-content;
+  bottom: -200px;
+  right: 50px;
+  padding: 8px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(235, 58, 45, 0.4);
+  border-radius: 43px;
+  z-index: 999;
+  transition: 0.3s;
+  &:hover {
+    background: rgba(235, 58, 45, 1);
+  }
+  &.show {
+    bottom: 50px;
+  }
+  span {
+    font-family: "Proxima Nova";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    /* identical to box height */
+
+    text-align: right;
+
+    color: #ffffff;
+  }
+  img {
+    width: 10px;
+    height: 5px;
+    margin-left: 7px;
+  }
+}
+
 @import "./header.scss";
 @import "./blog.scss";
 @import "./authors.scss";
@@ -328,6 +366,13 @@ ul {
 }
 
 @media screen and (max-width: 768px) {
+  .scroll-top {
+    background: rgba(235, 58, 45, 1);
+    right: 15px;
+    &.show {
+      bottom: 15px;
+    }
+  }
   .profile {
     &__container {
       grid-template-columns: 1fr;
