@@ -368,7 +368,7 @@
     line-height: 13px;
     text-decoration-line: underline;
 
-    color: #231f20;
+    color: #eb3a2d;
   }
   &__tags {
     font-family: "Proxima Nova";
@@ -479,14 +479,14 @@
       color: $title-color;
     }
     &__link {
+      font-family: "Commissioner";
       font-style: normal;
       font-weight: 500;
-      font-size: 11px;
-      line-height: 13px;
+      font-size: 14px;
+      line-height: 17px;
       text-decoration-line: underline;
 
       color: #2124a8;
-      margin-top: 5px;
     }
   }
 }
