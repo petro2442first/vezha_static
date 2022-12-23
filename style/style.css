@@ -671,6 +671,11 @@ html::-webkit-scrollbar {
 body {
   width: 100%;
   overflow-x: hidden;
+  background-image: url(../assets/images/main-bg.jpg);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 a {
@@ -731,6 +736,61 @@ ul {
   width: 10px;
   height: 5px;
   margin-left: 7px;
+}
+
+.left-bar {
+  position: fixed;
+  left: 75px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  z-index: 9999;
+}
+.left-bar a {
+  display: block;
+  position: relative;
+  width: 20px;
+  height: 20px;
+}
+.left-bar a img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: center center;
+     object-position: center center;
+}
+.left-bar a + a {
+  margin-top: 40px;
+}
+.left-bar a:last-child {
+  margin-top: 80px;
+}
+.left-bar a:last-child::before {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: calc(100% + 39px);
+  width: 100%;
+  height: 1px;
+  background: #e6e6e6;
+}
+.left-bar a.active::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -13px;
+  left: calc(50% - 3px);
+  width: 6px;
+  height: 6px;
+  background: #eb3a2d;
+  border-radius: 6px;
 }
 
 .header {
@@ -2484,6 +2544,9 @@ ul {
 }
 
 @media screen and (max-width: 1500px) {
+  .left-bar {
+    left: 35px;
+  }
   .header__socials {
     margin-left: 40px;
     gap: 15px;
@@ -2638,6 +2701,9 @@ ul {
   }
 }
 @media screen and (max-width: 900px) {
+  .left-bar {
+    display: none;
+  }
   .profile__container {
     padding: 40px 15px;
     gap: 40px;
