@@ -1321,13 +1321,13 @@ ul {
 .article-sidebar-item__excerpt {
   font-family: "Commissioner";
   font-style: normal;
-  font-weight: 400;
+  font-weight: 500;
   font-size: 13px;
   line-height: 18px;
   color: #1e1e1e;
 }
 .article-sidebar-item__author {
-  font-family: "Proxima Nova";
+  font-family: "Commissioner";
   font-style: normal;
   font-weight: 400;
   font-size: 11px;
@@ -1434,7 +1434,7 @@ ul {
 .telegram-news .article-telegram__excerpt {
   font-family: "Commissioner";
   font-style: normal;
-  font-weight: 400;
+  font-weight: 500;
   font-size: 13px;
   line-height: 18px;
   color: #1e1e1e;
@@ -1736,7 +1736,7 @@ ul {
 .article-page__content p {
   font-family: "Commissioner";
   font-style: normal;
-  font-weight: 400;
+  font-weight: 500;
   font-size: 14px;
   line-height: 17px;
   color: #231f20;
@@ -1757,7 +1757,7 @@ ul {
   text-decoration: none;
   font-family: "Commissioner";
   font-style: normal;
-  font-weight: 400;
+  font-weight: 500;
   font-size: 14px;
   line-height: 17px;
 }
