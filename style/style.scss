@@ -115,11 +115,11 @@ ul {
       margin-left: 50px;
     }
   }
-  .footer {
-    &__nav {
-      gap: 20px 40px;
-    }
-  }
+  // .footer {
+  //   &__nav {
+  //     gap: 20px 40px;
+  //   }
+  // }
   .sign {
     padding: 50px;
     display: flex;
@@ -133,7 +133,7 @@ ul {
     }
   }
 }
-@media screen and (max-width: 1375px) {
+@media screen and (max-width: 1340px) {
   .authors {
     max-width: 100%;
   }
@@ -143,7 +143,7 @@ ul {
         "auth date img"
         "title title img"
         "desc desc img"
-        "link tags tags";
+        "link link tags";
       gap: 5px;
     }
   }
@@ -494,6 +494,7 @@ ul {
     &__tags {
       justify-self: start;
       grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
     }
     &__socials {
       justify-self: start;
