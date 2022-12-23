@@ -116,21 +116,15 @@ document.addEventListener("DOMContentLoaded", (e) => {
       screen.availWidth > 1240 &&
       screen.availHeight < blog.clientHeight
     ) {
-      const sidebarTop =
-        header.clientHeight + tagsMenu.clientHeight !== null
-          ? tagsMenu.clientHeight
-          : 0 + 47;
+      const tagsMenuHeight = tagsMenu !== null ? tagsMenu.clientHeight : 0;
+      const sidebarTop = header.clientHeight + tagsMenuHeight + 47;
       const blogBottom =
-        header.clientHeight + tagsMenu.clientHeight !== null
-          ? tagsMenu.clientHeight
-          : 0 + blog.clientHeight;
+        header.clientHeight + tagsMenuHeight + blog.clientHeight;
       if (scrollTop >= sidebarTop) {
         stickyWrapper.classList.add("scroll");
         stickyWrapper.style = `
         right: ${blog.offsetLeft + 20}px;
-        padding-top: ${
-          tagsMenu.clientHeight !== null ? tagsMenu.clientHeight : 0 + 10
-        }px;
+        padding-top: ${tagsMenuHeight + 10}px;
         
         `;
         // width: ${sidebar.clientWidth + 75}px;
