@@ -97,6 +97,14 @@
       color: #231f20;
       padding: 25px 0;
     }
+    &.about {
+      p {
+        font-weight: 400;
+      }
+      a {
+        font-weight: 400;
+      }
+    }
   }
   &__bottom-bar {
     display: flex;

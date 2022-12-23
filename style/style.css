@@ -1650,10 +1650,16 @@ ul {
   font-weight: 600;
   font-family: "Commissioner";
   font-style: normal;
-  font-size: 17px;
-  line-height: 23px;
+  font-size: 14px;
+  line-height: 17px;
   color: #231f20;
   padding: 25px 0;
+}
+.article-page__content.about p {
+  font-weight: 400;
+}
+.article-page__content.about a {
+  font-weight: 400;
 }
 .article-page__bottom-bar {
   display: flex;
