@@ -2366,6 +2366,15 @@ ul {
   .blog__sidebar {
     margin-left: 50px;
   }
+  .article-item {
+    padding-left: 30px;
+  }
+  .article-item__link {
+    font-size: 13px;
+  }
+  .article-item__tags {
+    gap: 10px;
+  }
   .sign {
     padding: 50px;
     display: flex;
