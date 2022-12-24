@@ -254,7 +254,7 @@
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
-    line-height: 19px;
+    line-height: 17px;
 
     color: $primary-color;
     padding-top: 6px;
@@ -271,7 +271,7 @@
 
     text-decoration-line: underline;
 
-    color: #2124a8;
+    color: $primary-color;
   }
   &__tags {
     grid-area: tags;
@@ -488,7 +488,7 @@
       line-height: 17px;
       text-decoration-line: underline;
 
-      color: #2124a8;
+      color: $primary-color;
     }
   }
 }

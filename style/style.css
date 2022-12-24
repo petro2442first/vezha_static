@@ -1024,7 +1024,7 @@ ul {
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
-  line-height: 19px;
+  line-height: 17px;
   color: #231f20;
   padding-top: 6px;
   padding-bottom: 10px;
@@ -1039,7 +1039,7 @@ ul {
   /* identical to box height */
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline;
-  color: #2124a8;
+  color: #231f20;
 }
 .article-item__tags {
   grid-area: tags;
@@ -1246,7 +1246,7 @@ ul {
   line-height: 17px;
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline;
-  color: #2124a8;
+  color: #231f20;
 }
 
 .authors {
@@ -2354,7 +2354,7 @@ ul {
   justify-self: center;
 }
 
-@media screen and (max-width: 1728px) {
+@media screen and (max-width: 1800px) {
   .header__container {
     transform: scale(0.98);
   }
@@ -2362,10 +2362,29 @@ ul {
     margin: 10px 19px;
   }
 }
-@media screen and (max-width: 1500px) {
+@media screen and (max-width: 1727px) {
+  .header__container {
+    transform: scale(0.95);
+  }
+  .tags-menu__list {
+    transform: scale(0.94);
+  }
   .left-bar {
     left: 35px;
   }
+}
+@media screen and (max-width: 1600px) {
+  .header__container {
+    transform: scale(0.93);
+  }
+  .tags-menu__list {
+    transform: scale(0.92);
+  }
+  .left-bar {
+    left: 35px;
+  }
+}
+@media screen and (max-width: 1500px) {
   .tags-menu__list {
     transform: scale(0.86);
   }

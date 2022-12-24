@@ -171,7 +171,7 @@ ul {
 @import "./profile.scss";
 @import "./sign.scss";
 @import "./footer.scss";
-@media screen and (max-width: 1728px) {
+@media screen and (max-width: 1800px) {
   .header {
     &__container {
       transform: scale(0.98);
@@ -183,10 +183,37 @@ ul {
     }
   }
 }
-@media screen and (max-width: 1500px) {
+@media screen and (max-width: 1727px) {
+  .header {
+    &__container {
+      transform: scale(0.95);
+    }
+  }
+  .tags-menu {
+    &__list {
+      transform: scale(0.94);
+    }
+  }
   .left-bar {
     left: 35px;
   }
+}
+@media screen and (max-width: 1600px) {
+  .header {
+    &__container {
+      transform: scale(0.93);
+    }
+  }
+  .tags-menu {
+    &__list {
+      transform: scale(0.92);
+    }
+  }
+  .left-bar {
+    left: 35px;
+  }
+}
+@media screen and (max-width: 1500px) {
   .tags-menu {
     &__container {
       // max-width: 84%;
