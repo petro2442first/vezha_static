@@ -2263,6 +2263,7 @@ ul {
   grid-template-columns: minmax(auto, 370px) auto;
   grid-template-areas: "logo  nav" "links tags" "copy copy";
   gap: 47px 194px;
+  transform: scale(0.97);
 }
 .footer__logo {
   grid-area: logo;
@@ -2328,7 +2329,7 @@ ul {
   grid-area: tags;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  gap: 24px 80px;
+  gap: 24px 40px;
 }
 .footer__tags li a {
   font-family: "Commissioner";

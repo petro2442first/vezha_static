@@ -12,6 +12,7 @@
       "links tags"
       "copy copy";
     gap: 47px 194px;
+    transform: scale(0.97);
   }
   &__logo {
     grid-area: logo;
@@ -81,7 +82,7 @@
     grid-area: tags;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    gap: 24px 80px;
+    gap: 24px 40px;
     li {
       a {
         font-family: "Commissioner";
