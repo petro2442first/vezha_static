@@ -171,12 +171,37 @@ ul {
 @import "./profile.scss";
 @import "./sign.scss";
 @import "./footer.scss";
-
+@media screen and (max-width: 1728px) {
+  .header {
+    &__container {
+      transform: scale(0.98);
+    }
+  }
+  .tag-menu {
+    &__item {
+      margin: 10px 19px;
+    }
+  }
+}
 @media screen and (max-width: 1500px) {
   .left-bar {
     left: 35px;
   }
+  .tags-menu {
+    &__container {
+      // max-width: 84%;
+    }
+    &__list {
+      transform: scale(0.86);
+    }
+    &__item {
+      margin: 10px 18px;
+    }
+  }
   .header {
+    &__container {
+      transform: scale(0.92);
+    }
     &__socials {
       margin-left: 40px;
       gap: 15px;
@@ -198,12 +223,18 @@ ul {
     &__tags {
       gap: 10px;
     }
+    &__excerpt {
+      font-weight: 300;
+    }
   }
   // .footer {
   //   &__nav {
   //     gap: 20px 40px;
   //   }
   // }
+  .authors {
+    padding: 0 125px;
+  }
   .sign {
     padding: 50px;
     display: flex;
@@ -214,6 +245,18 @@ ul {
       transform-origin: 0 0;
       transform: scale(0.8);
       margin-bottom: -20%;
+    }
+  }
+  .footer {
+    &__container {
+      transform: scale(0.83);
+    }
+    &__nav {
+      li {
+        a {
+          font-size: 17px;
+        }
+      }
     }
   }
 }
@@ -252,6 +295,11 @@ ul {
     }
   }
 }
+@media screen and (max-width: 1280px) {
+  .nav-menu {
+    gap: 15px;
+  }
+}
 @media screen and (max-width: 1240px) {
   .profile {
     &__container {
@@ -272,6 +320,7 @@ ul {
     }
     &__container {
       width: 100%;
+      transform: scale(1);
     }
     &__socials {
       padding-top: 0;

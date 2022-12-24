@@ -70,7 +70,7 @@
       font-family: "Proxima Nova";
       font-style: normal;
       font-weight: 600;
-      font-size: 20px;
+      font-size: 18px;
       line-height: 22px;
       &.register-btn {
         color: $primary-color;
@@ -151,7 +151,7 @@
       font-family: "Proxima Nova";
       font-style: normal;
       font-weight: 700;
-      @include adapt-font(18, 16);
+      @include adapt-font(16, 14);
       text-transform: uppercase;
       color: $primary-color;
       transition: 0.3s;

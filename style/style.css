@@ -680,7 +680,7 @@ ul {
   font-family: "Proxima Nova";
   font-style: normal;
   font-weight: 600;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 22px;
 }
 .header__login-btns a.register-btn {
@@ -758,10 +758,10 @@ ul {
   font-style: normal;
   font-weight: 700;
   font-size: calc(
-    16px + 2 * ((100vw - 320px) / 1408)
+    14px + 2 * ((100vw - 320px) / 1408)
   );
   line-height: calc(
-    8px + 16px + 2 * ((100vw - 320px) / 1408)
+    8px + 14px + 2 * ((100vw - 320px) / 1408)
   );
   text-transform: uppercase;
   color: #231f20;
@@ -797,11 +797,13 @@ ul {
   transition: 0.3s;
   overflow: hidden;
   transform-origin: 0 0;
+  background-color: #eb3a2d;
 }
 .tags-menu__container {
   width: 100%;
-  background-color: #eb3a2d;
+  max-width: 1412px;
   padding: 6px 20px -2px 20px;
+  background-color: #eb3a2d;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -811,6 +813,7 @@ ul {
   top: 0;
   left: 0;
   z-index: 2;
+  max-width: 100%;
 }
 .tags-menu__list {
   display: flex;
@@ -842,7 +845,6 @@ ul {
   line-height: 19px;
   white-space: nowrap;
   color: #fff;
-  letter-spacing: 1.5px;
 }
 .tags-menu__item.active {
   border-bottom: 2px solid #fff;
@@ -1254,7 +1256,7 @@ ul {
   justify-content: flex-start;
   max-width: 1380px;
   margin-bottom: 60px;
-  padding: 0 100px;
+  padding: 0 0px;
 }
 .authors__title {
   font-family: "Commissioner";
@@ -2352,9 +2354,26 @@ ul {
   justify-self: center;
 }
 
+@media screen and (max-width: 1728px) {
+  .header__container {
+    transform: scale(0.98);
+  }
+  .tag-menu__item {
+    margin: 10px 19px;
+  }
+}
 @media screen and (max-width: 1500px) {
   .left-bar {
     left: 35px;
+  }
+  .tags-menu__list {
+    transform: scale(0.86);
+  }
+  .tags-menu__item {
+    margin: 10px 18px;
+  }
+  .header__container {
+    transform: scale(0.92);
   }
   .header__socials {
     margin-left: 40px;
@@ -2375,6 +2394,12 @@ ul {
   .article-item__tags {
     gap: 10px;
   }
+  .article-item__excerpt {
+    font-weight: 300;
+  }
+  .authors {
+    padding: 0 125px;
+  }
   .sign {
     padding: 50px;
     display: flex;
@@ -2386,6 +2411,12 @@ ul {
     transform-origin: 0 0;
     transform: scale(0.8);
     margin-bottom: -20%;
+  }
+  .footer__container {
+    transform: scale(0.83);
+  }
+  .footer__nav li a {
+    font-size: 17px;
   }
 }
 @media screen and (max-width: 1340px) {
@@ -2415,6 +2446,11 @@ ul {
     margin-bottom: -20%;
   }
 }
+@media screen and (max-width: 1280px) {
+  .nav-menu {
+    gap: 15px;
+  }
+}
 @media screen and (max-width: 1240px) {
   .profile__container {
     padding: 40px 15px;
@@ -2432,6 +2468,7 @@ ul {
   }
   .header__container {
     width: 100%;
+    transform: scale(1);
   }
   .header__socials {
     padding-top: 0;
