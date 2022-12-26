@@ -931,8 +931,8 @@ ul {
   font-family: "Commissioner";
   font-style: normal;
   font-weight: 600;
-  font-size: 26px;
-  line-height: 32px;
+  font-size: 24px;
+  line-height: 29px;
   align-self: flex-start;
   color: #1e1e1e;
 }
@@ -1440,8 +1440,8 @@ ul {
   font-family: "Commissioner";
   font-style: normal;
   font-weight: 400;
-  font-size: 16px;
-  line-height: 22px;
+  font-size: 14px;
+  line-height: 21px;
   color: #231f20;
   margin-top: 20px;
 }
