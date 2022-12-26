@@ -882,10 +882,9 @@ ul {
   width: calc(40vw + 189px);
 }
 .blog__sidebar {
-  max-width: 380px;
   margin-left: 7.12vw;
   height: 100%;
-  width: 380px;
+  width: 440px;
   will-change: min-height;
   position: relative;
 }
@@ -898,7 +897,7 @@ ul {
   z-index: 1;
   height: 100vh;
   overflow-y: auto;
-  width: 380px;
+  width: 440px;
   overflow-x: hidden;
 }
 .blog__sidebar .inner-wrapper-sticky::-webkit-scrollbar {
@@ -921,7 +920,7 @@ ul {
 .blog__sidebar .inner-wrapper-sticky.no-sticky {
   height: auto;
   position: relative;
-  width: auto !important;
+  width: 440px !important;
   padding-top: 0 !important;
   right: 0 !important;
 }
@@ -1093,7 +1092,7 @@ ul {
   line-height: 29px;
   position: relative;
   color: #1e1e1e;
-  margin-top: 30px;
+  margin-bottom: 12px;
 }
 .sidebar-title::before {
   content: "";
@@ -1188,6 +1187,9 @@ ul {
   justify-content: flex-start;
 }
 
+.media-ratings {
+  margin-top: 32px;
+}
 .media-ratings a {
   display: block;
   position: relative;
@@ -1201,6 +1203,9 @@ ul {
   display: block;
 }
 
+.youtube {
+  margin-top: 32px;
+}
 .youtube__video {
   margin-top: 6px;
   width: 100%;
@@ -1221,6 +1226,9 @@ ul {
   padding-top: 56.25%;
 }
 
+.telegram-news {
+  margin-top: 32px;
+}
 .telegram-news .article-telegram {
   padding: 6px 10px 9px 10px;
   background: #fff;
@@ -1485,7 +1493,7 @@ ul {
   color: #1e1e1e;
 }
 .article-page__container {
-  padding: 20px 62px 30px 34px;
+  padding: 20px 48px 20px 48px;
   background: #ffffff;
   border: 1px solid #ffffff;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
@@ -1537,7 +1545,7 @@ ul {
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
-  line-height: 17px;
+  line-height: 21px;
   color: #231f20;
 }
 .article-page__content p + p {
@@ -1558,14 +1566,14 @@ ul {
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
-  line-height: 17px;
+  line-height: 21px;
 }
 .article-page__content h3 {
   font-weight: 600;
   font-family: "Commissioner";
   font-style: normal;
   font-size: 14px;
-  line-height: 17px;
+  line-height: 21px;
   color: #231f20;
   padding: 25px 0;
 }

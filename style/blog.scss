@@ -100,10 +100,10 @@
     width: calc(40vw + 189px);
   }
   &__sidebar {
-    max-width: 380px;
+    // max-width: 380px;
     margin-left: 7.12vw;
     height: 100%;
-    width: 380px;
+    width: 440px;
     will-change: min-height;
     position: relative;
     // .inner-wrapper-sticky {
@@ -121,7 +121,7 @@
       z-index: 1;
       height: 100vh;
       overflow-y: auto;
-      width: 380px;
+      width: 440px;
       // width: 100%;
       overflow-x: hidden;
       &::-webkit-scrollbar {
@@ -145,7 +145,7 @@
       &.no-sticky {
         height: auto;
         position: relative;
-        width: auto !important;
+        width: 440px !important;
         padding-top: 0 !important;
         right: 0 !important;
       }
@@ -326,7 +326,7 @@
   line-height: 29px;
   position: relative;
   color: $title-color;
-  margin-top: 30px;
+  margin-bottom: 12px;
   &::before {
     content: "";
     display: block;
@@ -428,6 +428,7 @@
 }
 
 .media-ratings {
+  margin-top: 32px;
   a {
     display: block;
     position: relative;
@@ -442,6 +443,7 @@
 }
 
 .youtube {
+  margin-top: 32px;
   &__video {
     margin-top: 6px;
     width: 100%;
@@ -463,6 +465,7 @@
 }
 
 .telegram-news {
+  margin-top: 32px;
   .article-telegram {
     padding: 6px 10px 9px 10px;
     background: $secondary-color;
