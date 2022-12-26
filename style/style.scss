@@ -361,7 +361,7 @@ ul {
   }
   .nav-menu {
     position: fixed;
-    top: 0;
+    top: -10px;
     left: -260px;
     width: 230px;
     height: 100vh;
@@ -375,7 +375,7 @@ ul {
     align-content: start;
     padding: 20px;
     &.open {
-      left: 0;
+      left: -20px;
       .nav-menu__close {
         &::before {
           display: block;

@@ -629,6 +629,7 @@ ul {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  z-index: 9999;
 }
 .header__nav {
   padding-top: 20px;
@@ -2509,7 +2510,7 @@ ul {
   }
   .nav-menu {
     position: fixed;
-    top: 0;
+    top: -10px;
     left: -260px;
     width: 230px;
     height: 100vh;
@@ -2524,7 +2525,7 @@ ul {
     padding: 20px;
   }
   .nav-menu.open {
-    left: 0;
+    left: -20px;
   }
   .nav-menu.open .nav-menu__close::before {
     display: block;
