@@ -862,12 +862,12 @@ ul {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  max-width: 860px;
-  width: calc(40vw + 169px);
+  max-width: 880px;
+  width: calc(40vw + 189px);
 }
 .blog__ratings {
-  max-width: 860px;
-  width: calc(40vw + 169px);
+  max-width: 880px;
+  width: calc(40vw + 189px);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -878,8 +878,8 @@ ul {
   align-items: center;
 }
 .blog__single {
-  max-width: 860px;
-  width: calc(40vw + 169px);
+  max-width: 880px;
+  width: calc(40vw + 189px);
 }
 .blog__sidebar {
   max-width: 380px;
@@ -1474,7 +1474,7 @@ ul {
 }
 
 .article-page {
-  max-width: 860px;
+  max-width: 880px;
 }
 .article-page__title {
   font-family: "Commissioner";
@@ -1485,7 +1485,7 @@ ul {
   color: #1e1e1e;
 }
 .article-page__container {
-  padding: 20px 35px 30px 35px;
+  padding: 20px 62px 30px 34px;
   background: #ffffff;
   border: 1px solid #ffffff;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
