@@ -2653,6 +2653,9 @@ ul {
   .authors {
     padding: 0 60px;
   }
+  .blog__sidebar .inner-wrapper-sticky.no-sticky {
+    width: 100%;
+  }
 }
 @media screen and (max-width: 768px) {
   .scroll-top {
