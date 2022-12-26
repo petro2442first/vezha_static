@@ -920,7 +920,7 @@ ul {
 .blog__sidebar .inner-wrapper-sticky.no-sticky {
   height: auto;
   position: relative;
-  width: 440px !important;
+  width: 440px;
   padding-top: 0 !important;
   right: 0 !important;
 }
