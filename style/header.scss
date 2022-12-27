@@ -152,7 +152,9 @@
       font-family: "Proxima Nova";
       font-style: normal;
       font-weight: 700;
-      @include adapt-font(16, 14);
+      // @include adapt-font(16, 14);
+      font-size: 16px;
+      line-height: 19px;
       text-transform: uppercase;
       color: $primary-color;
       transition: 0.3s;
