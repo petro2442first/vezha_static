@@ -892,6 +892,8 @@ ul {
   display: flex;
   flex-direction: column;
   align-items: center;
+  max-width: 880px;
+  width: calc(40vw + 189px);
 }
 .blog__single {
   max-width: 880px;
@@ -1279,7 +1281,7 @@ ul {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  max-width: 1380px;
+  max-width: 880px;
   margin-bottom: 60px;
   padding: 0 0px;
 }

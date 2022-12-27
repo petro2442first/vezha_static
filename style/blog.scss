@@ -112,6 +112,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    max-width: 880px;
+    width: calc(40vw + 189px);
   }
   &__single {
     max-width: 880px;
