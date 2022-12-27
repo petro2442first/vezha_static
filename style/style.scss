@@ -182,13 +182,7 @@ ul {
     }
   }
 }
-@media screen and (max-height: 860px) {
-  .sign {
-    &__container {
-      transform: scale(0.68);
-    }
-  }
-}
+
 @media screen and (max-width: 1800px) {
   .header {
     &__container {
@@ -719,3 +713,17 @@ ul {
     }
   }
 }
+@media screen and (max-height: 860px) {
+  .sign {
+    &__container {
+      transform: scale(0.68);
+    }
+  }
+}
+// @media screen and (max-height: 720px) {
+//   .sign {
+//     &__container {
+//       transform: scale(0.58);
+//     }
+//   }
+// }

@@ -2368,11 +2368,6 @@ ul {
     transform: scale(0.9);
   }
 }
-@media screen and (max-height: 860px) {
-  .sign__container {
-    transform: scale(0.68);
-  }
-}
 @media screen and (max-width: 1800px) {
   .header__container {
     transform: scale(0.98);
@@ -2785,5 +2780,10 @@ ul {
   .authors-list .author__thumbnail {
     width: 120px;
     height: 120px;
+  }
+}
+@media screen and (max-height: 860px) {
+  .sign__container {
+    transform: scale(0.68);
   }
 }/*# sourceMappingURL=style.css.map */
