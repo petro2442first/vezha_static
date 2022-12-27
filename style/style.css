@@ -2576,6 +2576,13 @@ ul {
     border: 0;
     margin-bottom: 15px;
   }
+  .nav-menu__close img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
   .nav-menu__close::before {
     content: "";
     display: none;
