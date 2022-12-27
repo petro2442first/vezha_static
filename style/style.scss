@@ -253,6 +253,16 @@ ul {
     &__sidebar {
       margin-left: 50px;
     }
+    &__articles {
+      &.saved {
+        .article-item {
+          &::before {
+            top: 22px;
+            left: 5px;
+          }
+        }
+      }
+    }
   }
   .article-item {
     padding-left: 30px;
@@ -601,6 +611,20 @@ ul {
         padding-right: 0;
         padding-bottom: 0;
         overflow-x: auto;
+      }
+    }
+    &__articles {
+      &.saved {
+        .article-item {
+          &::before {
+            top: 0px;
+            left: 0px;
+            padding: 10px;
+            border-radius: 0 0 5px 0;
+            background-color: #fff;
+            background-size: 55%;
+          }
+        }
       }
     }
   }
