@@ -63,7 +63,7 @@
     p {
       font-family: "Commissioner";
       font-style: normal;
-      font-weight: 500;
+      font-weight: 300;
       font-size: 14px;
       line-height: 21px;
 
@@ -83,12 +83,12 @@
       text-decoration: none;
       font-family: "Commissioner";
       font-style: normal;
-      font-weight: 500;
+      font-weight: 300;
       font-size: 14px;
       line-height: 21px;
     }
     h3 {
-      font-weight: 600;
+      font-weight: 500;
       font-family: "Commissioner";
       font-style: normal;
       font-size: 14px;
@@ -265,7 +265,7 @@
     grid-area: name;
     font-family: "Commissioner";
     font-style: normal;
-    font-weight: 600;
+    font-weight: 400;
     font-size: 12px;
     line-height: 16px;
 
@@ -275,7 +275,7 @@
     grid-area: text;
     font-family: "Commissioner";
     font-style: normal;
-    font-weight: 500;
+    font-weight: 300;
     font-size: 14px;
     line-height: 19px;
     letter-spacing: 0.01em;
@@ -285,7 +285,7 @@
   &__load-more {
     font-family: "Proxima Nova";
     font-style: normal;
-    font-weight: 700;
+    font-weight: 600;
     font-size: 14px;
     line-height: 17px;
     /* identical to box height */
