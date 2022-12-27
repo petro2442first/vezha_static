@@ -2368,6 +2368,11 @@ ul {
     transform: scale(0.9);
   }
 }
+@media screen and (max-height: 860px) {
+  .sign__container {
+    transform: scale(0.68);
+  }
+}
 @media screen and (max-width: 1800px) {
   .header__container {
     transform: scale(0.98);
@@ -2443,7 +2448,6 @@ ul {
   .sign__container {
     transform-origin: 0 0;
     transform: scale(0.8);
-    margin-bottom: -20%;
   }
   .footer__container {
     transform: scale(0.83);
