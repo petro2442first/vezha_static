@@ -35,6 +35,9 @@ body {
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  &.sign-body {
+    overflow: hidden;
+  }
 }
 
 a {
@@ -171,6 +174,13 @@ ul {
 @import "./profile.scss";
 @import "./sign.scss";
 @import "./footer.scss";
+@media screen and (min-width: 1801px) {
+  .sign {
+    &__container {
+      transform: scale(0.9);
+    }
+  }
+}
 @media screen and (max-width: 1800px) {
   .header {
     &__container {

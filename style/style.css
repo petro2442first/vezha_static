@@ -474,6 +474,9 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
+body.sign-body {
+  overflow: hidden;
+}
 
 a {
   text-decoration: none;
@@ -2028,8 +2031,8 @@ ul {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  padding: 115px 165px;
-  height: 100%;
+  padding: 0 165px;
+  height: 100vh;
   width: 100%;
 }
 .sign::before {
@@ -2360,6 +2363,11 @@ ul {
   justify-self: center;
 }
 
+@media screen and (min-width: 1801px) {
+  .sign__container {
+    transform: scale(0.9);
+  }
+}
 @media screen and (max-width: 1800px) {
   .header__container {
     transform: scale(0.98);
