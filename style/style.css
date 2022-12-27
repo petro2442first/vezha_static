@@ -2686,9 +2686,9 @@ ul {
   }
   .sign__container {
     transform-origin: center 0;
-    transform: scale(0.9);
+    transform: scale(0.8);
     width: 100%;
-    margin-bottom: -88px;
+    margin-bottom: -176px;
     padding: 35px 15px 65px 15px;
   }
   .tags-menu__container {
