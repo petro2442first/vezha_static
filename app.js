@@ -66,10 +66,37 @@ function burgerMenu() {
     });
   }
 }
+function articlePopup() {
+  var _document$querySelect7, _document$querySelect8;
+  const popup =
+    (_document$querySelect7 = document.querySelector(".article-popup")) !==
+      null && _document$querySelect7 !== void 0
+      ? _document$querySelect7
+      : null;
+  if (popup === null) return;
+  const closePopup = popup.querySelector(".article-popup__close");
+  const openPopup =
+    (_document$querySelect8 = document.querySelector("#open-article-popup")) !==
+      null && _document$querySelect8 !== void 0
+      ? _document$querySelect8
+      : null;
+  if (openPopup === null) return;
+  openPopup.addEventListener("click", (e) => {
+    popup.classList.add("show");
+  });
+  closePopup.addEventListener("click", (e) => {
+    popup.classList.remove("show");
+  });
+  const articleHint = document.querySelector(".article-popup-hint");
+  articleHint.addEventListener("click", (e) => {
+    articleHint.classList.add("hide");
+  });
+}
 document.addEventListener("DOMContentLoaded", (e) => {
   var _document$querySelect5, _sidebar$querySelecto;
   authorsSlider();
   burgerMenu();
+  articlePopup();
   const tagsMenu =
     document.querySelector(".tags-menu") !== null
       ? document.querySelector(".tags-menu")

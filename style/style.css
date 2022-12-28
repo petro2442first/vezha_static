@@ -2059,6 +2059,207 @@ ul {
   align-items: center;
 }
 
+.article-popup {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(35, 31, 32, 0.5);
+  visibility: hidden;
+  z-index: -1;
+  opacity: 0;
+  transition: 0.3s;
+}
+.article-popup.show {
+  z-index: 99999;
+  opacity: 1;
+  visibility: visible;
+}
+.article-popup__container {
+  position: relative;
+  padding: 33px 36px;
+  max-width: 880px;
+  width: 100%;
+  background: #fff;
+}
+.article-popup__close {
+  position: absolute;
+  top: 22px;
+  right: 22px;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+.article-popup__close img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.article-popup__title {
+  font-family: "Commissioner";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 26px;
+  line-height: 32px;
+  /* identical to box height */
+  text-align: center;
+  color: #1b1717;
+}
+.article-popup__description {
+  font-family: "Commissioner";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  /* identical to box height */
+  text-align: center;
+  color: #231f20;
+  margin-top: 12px;
+}
+.article-popup__form {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.article-popup__form input:not([type=file]),
+.article-popup__form textarea {
+  width: 100%;
+  font-family: "Commissioner";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  /* identical to box height */
+  color: #c0c0c0;
+  padding: 15px 30px;
+  border: 1px solid #959595;
+  margin-top: 15px;
+}
+.article-popup__form input:not([type=file])::-moz-placeholder, .article-popup__form textarea::-moz-placeholder {
+  font-family: "Commissioner";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  /* identical to box height */
+  color: #c0c0c0;
+}
+.article-popup__form input:not([type=file]):-ms-input-placeholder, .article-popup__form textarea:-ms-input-placeholder {
+  font-family: "Commissioner";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  /* identical to box height */
+  color: #c0c0c0;
+}
+.article-popup__form input:not([type=file])::placeholder,
+.article-popup__form textarea::placeholder {
+  font-family: "Commissioner";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  /* identical to box height */
+  color: #c0c0c0;
+}
+.article-popup__form textarea {
+  min-height: 230px;
+  resize: vertical;
+}
+.article-popup__file {
+  margin-top: 15px;
+}
+.article-popup__file input {
+  position: fixed;
+  top: -10000px;
+}
+.article-popup__file label {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.article-popup__file label img {
+  margin-right: 5px;
+  display: block;
+  width: 26px;
+  height: 26px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.article-popup__send {
+  align-self: center;
+  width: 100%;
+  max-width: 430px;
+  padding: 18px 30px;
+  font-family: "Proxima Nova";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  /* identical to box height */
+  text-align: center;
+  color: #ffffff;
+  text-align: center;
+  margin-top: 20px;
+  background: #231f20;
+  border: 1px solid #3f3b3c;
+}
+.article-popup__send:hover {
+  background: transparent;
+  color: #231f20;
+}
+
+.article-popup-hint {
+  position: absolute;
+  bottom: 100%;
+  left: 100%;
+  background-image: url(../assets/images/article_hint_bg.svg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  text-align: center;
+  font-family: "Commissioner";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: #ffffff;
+  width: 279px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.article-popup-hint::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 33px;
+  height: 33px;
+  border-radius: 100px;
+  background-image: url(../assets/images/icons/close_white.svg);
+  background-size: 60%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  bottom: calc(100% - 11px);
+  left: calc(100% - 8px);
+  background-color: #eb3a2d;
+}
+.article-popup-hint.hide {
+  transform: translateY(-30px);
+  opacity: 0;
+  visibility: hidden;
+}
+
 .sign {
   overflow: hidden;
   display: flex;
@@ -2706,6 +2907,9 @@ ul {
   }
 }
 @media screen and (max-width: 768px) {
+  .article-popup__container {
+    padding-top: 40px;
+  }
   .scroll-top {
     background: rgb(235, 58, 45);
     right: 15px;
