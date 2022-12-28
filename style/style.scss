@@ -1,6 +1,7 @@
 @import "./fonts.scss";
 @import "./normalize.scss";
 @import "./vars.scss";
+
 $max-width: 1728;
 @mixin adapt-font($pc-size, $mob-size) {
   $add-size: $pc-size - $mob-size;
@@ -12,6 +13,7 @@ $max-width: 1728;
     8px + #{$mob-size + px} + #{$add-size} * ((100vw - 320px) / #{$max-width})
   );
 }
+
 * {
   margin: 0;
   padding: 0;

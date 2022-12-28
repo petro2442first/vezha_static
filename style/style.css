@@ -1281,7 +1281,7 @@ ul {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  max-width: 880px;
+  max-width: 1380px;
   margin-bottom: 60px;
   padding: 0 0px;
 }
@@ -1405,7 +1405,7 @@ ul {
 }
 
 .authors-list {
-  max-width: 860px;
+  max-width: 880px;
   margin-bottom: 50px;
 }
 .authors-list .author {
