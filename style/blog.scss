@@ -73,6 +73,7 @@
   justify-content: center;
   align-items: flex-start;
   position: relative;
+  max-width: 1380px;
   &__articles {
     display: flex;
     flex-direction: column;
@@ -136,6 +137,7 @@
       position: absolute;
       background-color: $secondary-color;
       padding-left: 60px;
+      margin-left: -60px;
       padding-right: 5px;
       padding-bottom: 10px;
       z-index: 1;
