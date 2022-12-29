@@ -93,6 +93,7 @@ function articlePopup() {
   });
 }
 document.addEventListener("DOMContentLoaded", (e) => {
+  var _document$querySelect9;
   var _document$querySelect5, _sidebar$querySelecto;
   authorsSlider();
   burgerMenu();
@@ -128,7 +129,11 @@ document.addEventListener("DOMContentLoaded", (e) => {
   }
 
   // Adapt left bar for mobile devices
-  const leftBar = document.querySelector(".left-bar") ?? null;
+  const leftBar =
+    (_document$querySelect9 = document.querySelector(".left-bar")) !== null &&
+    _document$querySelect9 !== void 0
+      ? _document$querySelect9
+      : null;
   if (leftBar !== null && screen.availWidth <= 1240) {
     leftBar.remove();
     leftBar.classList.add("mobile");
