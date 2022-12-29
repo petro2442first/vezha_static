@@ -2041,7 +2041,7 @@ ul {
   overflow-x: hidden;
   overflow-y: auto;
   max-height: 500px;
-  padding-right: 5px;
+  padding-right: 15px;
 }
 .profile__publications .pub::-webkit-scrollbar {
   width: 5px;
@@ -2060,7 +2060,7 @@ ul {
 .profile__publications .pub__item {
   font-family: "Commissioner";
   font-style: normal;
-  font-weight: 500;
+  font-weight: 400;
   font-size: 15px;
   line-height: 20px;
   -webkit-text-decoration-line: underline;
