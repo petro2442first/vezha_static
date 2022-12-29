@@ -74,7 +74,7 @@ function articlePopup() {
       ? _document$querySelect7
       : null;
   if (popup === null) return;
-  const closePopup = popup.querySelector(".article-popup__close");
+  const closePopup = document.querySelector(".article-popup__close");
   const openPopup =
     (_document$querySelect8 = document.querySelector("#open-article-popup")) !==
       null && _document$querySelect8 !== void 0
