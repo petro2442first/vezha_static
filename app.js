@@ -116,8 +116,9 @@ document.addEventListener("DOMContentLoaded", (e) => {
       ? _document$querySelect5
       : null;
   const stickyWrapper =
-    (_sidebar$querySelecto = sidebar.querySelector(".inner-wrapper-sticky")) !==
-      null && _sidebar$querySelecto !== void 0
+    (_sidebar$querySelecto = document.querySelector(
+      ".inner-wrapper-sticky"
+    )) !== null && _sidebar$querySelecto !== void 0
       ? _sidebar$querySelecto
       : null;
   if (sidebar !== null && screen.availWidth > 1240) {
