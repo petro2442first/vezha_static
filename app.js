@@ -121,12 +121,14 @@ document.addEventListener("DOMContentLoaded", (e) => {
     )) !== null && _sidebar$querySelecto !== void 0
       ? _sidebar$querySelecto
       : null;
-  if (sidebar !== null && screen.availWidth > 1240) {
-    sidebar.style = `height: ${blog.clientHeight}px`;
-  }
-  if (screen.availHeight > blog.clientHeight) {
-    stickyWrapper.classList.add("no-sticky");
-    sidebar.style = ``;
+  if (sidebar !== null) {
+    if (screen.availWidth > 1240) {
+      sidebar.style = `height: ${blog.clientHeight}px`;
+    }
+    if (screen.availHeight > blog.clientHeight) {
+      stickyWrapper.classList.add("no-sticky");
+      sidebar.style = ``;
+    }
   }
 
   // Adapt left bar for mobile devices
