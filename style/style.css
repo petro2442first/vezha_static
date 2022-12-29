@@ -2678,6 +2678,9 @@ ul {
   .nav-menu {
     gap: 25px;
   }
+  .blog {
+    max-width: 1192px;
+  }
   .blog__sidebar {
     margin-left: 50px;
   }
