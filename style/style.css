@@ -2758,6 +2758,8 @@ ul {
   .profile__container {
     padding: 40px 15px;
     gap: 40px;
+    transform: scale(1);
+    margin: 0;
   }
   .profile__avatar {
     width: 300px;
