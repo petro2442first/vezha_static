@@ -147,7 +147,7 @@
         line-height: 20px;
         text-decoration-line: underline;
 
-        color: #2124a8;
+        color: #1b1717;
       }
     }
   }
@@ -357,49 +357,5 @@
       background: transparent;
       color: #231f20;
     }
-  }
-}
-
-.article-popup-hint {
-  position: absolute;
-  bottom: 100%;
-  left: 100%;
-  background-image: url(../assets/images/article_hint_bg.svg);
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  // padding: 16px 20px 17px 26px;
-  text-align: center;
-  font-family: "Commissioner";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 17px;
-
-  color: #ffffff;
-  width: 279px;
-  height: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  &::after {
-    content: "";
-    display: block;
-    position: absolute;
-    width: 33px;
-    height: 33px;
-    border-radius: 100px;
-    background-image: url(../assets/images/icons/close_white.svg);
-    background-size: 60%;
-    background-position: center center;
-    background-repeat: no-repeat;
-    bottom: calc(100% - 11px);
-    left: calc(100% - 8px);
-    background-color: #eb3a2d;
-  }
-  &.hide {
-    transform: translateY(-30px);
-    opacity: 0;
-    visibility: hidden;
   }
 }

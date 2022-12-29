@@ -563,6 +563,29 @@ ul {
 .left-bar.to-top a:last-child::before {
   bottom: calc(100% + 24px);
 }
+.left-bar.mobile {
+  position: relative;
+  left: 0;
+  top: 0;
+  transform: none;
+  display: grid;
+  grid-auto-flow: column;
+  gap: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #231f20;
+}
+.left-bar.mobile .left-bar__home {
+  display: none;
+}
+.left-bar.mobile .article-popup-hint {
+  display: none;
+}
+.left-bar.mobile a img {
+  filter: brightness(0.2);
+}
+.left-bar.mobile a + a {
+  margin-top: 0;
+}
 .left-bar a {
   display: block;
   position: relative;
@@ -603,6 +626,47 @@ ul {
   height: 6px;
   background: #eb3a2d;
   border-radius: 6px;
+}
+.left-bar .article-popup-hint {
+  position: absolute;
+  bottom: 100%;
+  left: 100%;
+  background-image: url(../assets/images/article_hint_bg.svg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  text-align: center;
+  font-family: "Commissioner";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: #ffffff;
+  width: 279px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.left-bar .article-popup-hint::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 33px;
+  height: 33px;
+  border-radius: 100px;
+  background-image: url(../assets/images/icons/close_white.svg);
+  background-size: 60%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  bottom: calc(100% - 11px);
+  left: calc(100% - 8px);
+  background-color: #eb3a2d;
+}
+.left-bar .article-popup-hint.hide {
+  transform: translateY(-30px);
+  opacity: 0;
+  visibility: hidden;
 }
 
 .header {
@@ -725,7 +789,7 @@ ul {
   align-self: end;
   justify-self: end;
 }
-.header__profile a {
+.header__profile p {
   grid-area: link;
   font-family: "Proxima Nova";
   font-style: normal;
@@ -2000,7 +2064,7 @@ ul {
   line-height: 20px;
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline;
-  color: #2124a8;
+  color: #1b1717;
 }
 .profile__title p {
   font-family: "Commissioner";
@@ -2216,48 +2280,6 @@ ul {
 .article-popup__send:hover {
   background: transparent;
   color: #231f20;
-}
-
-.article-popup-hint {
-  position: absolute;
-  bottom: 100%;
-  left: 100%;
-  background-image: url(../assets/images/article_hint_bg.svg);
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  text-align: center;
-  font-family: "Commissioner";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 17px;
-  color: #ffffff;
-  width: 279px;
-  height: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.article-popup-hint::after {
-  content: "";
-  display: block;
-  position: absolute;
-  width: 33px;
-  height: 33px;
-  border-radius: 100px;
-  background-image: url(../assets/images/icons/close_white.svg);
-  background-size: 60%;
-  background-position: center center;
-  background-repeat: no-repeat;
-  bottom: calc(100% - 11px);
-  left: calc(100% - 8px);
-  background-color: #eb3a2d;
-}
-.article-popup-hint.hide {
-  transform: translateY(-30px);
-  opacity: 0;
-  visibility: hidden;
 }
 
 .sign {
@@ -2620,6 +2642,10 @@ ul {
   .left-bar {
     left: 35px;
   }
+  .profile__container {
+    transform: scale(0.94);
+    margin: -15px -45px;
+  }
 }
 @media screen and (max-width: 1600px) {
   .header__container {
@@ -2687,6 +2713,10 @@ ul {
   }
   .footer__nav li a {
     font-size: 17px;
+  }
+  .profile__container {
+    transform: scale(0.84);
+    margin: -60px -110px;
   }
 }
 @media screen and (max-width: 1340px) {
@@ -2836,9 +2866,6 @@ ul {
   }
 }
 @media screen and (max-width: 900px) {
-  .left-bar {
-    display: none;
-  }
   .profile__container {
     padding: 40px 15px;
     gap: 40px;

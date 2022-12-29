@@ -125,6 +125,32 @@ ul {
       }
     }
   }
+  &.mobile {
+    position: relative;
+    left: 0;
+    top: 0;
+    transform: none;
+    display: grid;
+    grid-auto-flow: column;
+    gap: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #231f20;
+    .left-bar__home {
+      display: none;
+    }
+    .article-popup-hint {
+      display: none;
+    }
+    a {
+      img {
+        filter: brightness(0.2);
+      }
+      & + a {
+        margin-top: 0;
+        // margin-left: 30px;
+      }
+    }
+  }
   a {
     display: block;
     position: relative;
@@ -164,6 +190,49 @@ ul {
         background: #eb3a2d;
         border-radius: 6px;
       }
+    }
+  }
+  .article-popup-hint {
+    position: absolute;
+    bottom: 100%;
+    left: 100%;
+    background-image: url(../assets/images/article_hint_bg.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    // padding: 16px 20px 17px 26px;
+    text-align: center;
+    font-family: "Commissioner";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+
+    color: #ffffff;
+    width: 279px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 33px;
+      height: 33px;
+      border-radius: 100px;
+      background-image: url(../assets/images/icons/close_white.svg);
+      background-size: 60%;
+      background-position: center center;
+      background-repeat: no-repeat;
+      bottom: calc(100% - 11px);
+      left: calc(100% - 8px);
+      background-color: #eb3a2d;
+    }
+    &.hide {
+      transform: translateY(-30px);
+      opacity: 0;
+      visibility: hidden;
     }
   }
 }
@@ -210,6 +279,12 @@ ul {
   }
   .left-bar {
     left: 35px;
+  }
+  .profile {
+    &__container {
+      transform: scale(0.94);
+      margin: -15px -45px;
+    }
   }
 }
 @media screen and (max-width: 1600px) {
@@ -308,6 +383,12 @@ ul {
           font-size: 17px;
         }
       }
+    }
+  }
+  .profile {
+    &__container {
+      transform: scale(0.84);
+      margin: -60px -110px;
     }
   }
 }
@@ -480,9 +561,6 @@ ul {
 }
 
 @media screen and (max-width: 900px) {
-  .left-bar {
-    display: none;
-  }
   .profile {
     &__container {
       padding: 40px 15px;

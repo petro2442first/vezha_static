@@ -123,10 +123,20 @@ document.addEventListener("DOMContentLoaded", (e) => {
     sidebar.style = `height: ${blog.clientHeight}px`;
   }
   if (screen.availHeight > blog.clientHeight) {
-    console.log("ok");
     stickyWrapper.classList.add("no-sticky");
     sidebar.style = ``;
   }
+
+  // Adapt left bar for mobile devices
+  const leftBar = document.querySelector(".left-bar") ?? null;
+  if (leftBar !== null && screen.availWidth <= 1240) {
+    leftBar.remove();
+    leftBar.classList.add("mobile");
+    const navMenu = document.querySelector(".nav-menu");
+    navMenu.appendChild(leftBar);
+  }
+  // -----------------------------------
+
   window.addEventListener("scroll", (e) => {
     var _document$querySelect6;
     const header = document.querySelector(".header");
