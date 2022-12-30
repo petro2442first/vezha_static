@@ -12,7 +12,7 @@
   &__container {
     width: 100%;
     max-width: 1412px;
-    padding: 6px 20px -2px 20px;
+    padding: 16px 20px 8px 20px;
     background-color: $accent-color;
     display: flex;
     align-items: center;
@@ -26,10 +26,11 @@
     }
   }
   &__list {
-    display: flex;
-    justify-content: flex-start;
+    display: grid;
+    grid-auto-flow: column;
+    gap: 40px;
+    justify-content: start;
     align-items: center;
-    // flex-wrap: wrap;
     overflow-x: auto;
     &::-webkit-scrollbar {
       // display: none;
@@ -47,7 +48,7 @@
     }
   }
   &__item {
-    margin: 10px 20px;
+    // margin: 10px 20px;
 
     a {
       font-family: "Proxima Nova";
@@ -81,7 +82,7 @@
     justify-content: flex-start;
     max-width: 880px;
 
-    width: calc(40vw + 189px);
+    width: calc(20vw + 514.4px);
     &.saved {
       .article-item {
         position: relative;
