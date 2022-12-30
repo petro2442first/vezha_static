@@ -1477,7 +1477,7 @@ ul {
   width: 100%;
   padding: 10px;
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: auto auto 175px;
   grid-template-areas: "img name link" "img prof link" "img desc desc" "img socs socs";
   grid-template-rows: 24px 24px auto auto;
   gap: 5px 40px;

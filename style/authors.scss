@@ -155,7 +155,7 @@
     width: 100%;
     padding: 10px;
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: auto auto 175px;
     grid-template-areas:
       "img name link"
       "img prof link"
