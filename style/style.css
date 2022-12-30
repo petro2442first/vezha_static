@@ -1272,6 +1272,7 @@ ul {
 }
 
 .media-ratings {
+  display: block;
   margin-top: 32px;
 }
 .media-ratings a {
