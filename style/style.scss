@@ -340,15 +340,19 @@ ul {
     }
   }
   .article-item {
-    padding-left: 30px;
+    // padding-left: 30px;
+    padding: 20px 40px 33px 52px;
     &__link {
-      font-size: 13px;
+      font-size: 12px;
     }
     &__tags {
       gap: 10px;
     }
     &__excerpt {
       font-weight: 300;
+    }
+    &__thumbnail {
+      margin-left: 25px;
     }
   }
   // .footer {

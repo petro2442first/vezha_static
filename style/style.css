@@ -2686,16 +2686,19 @@ ul {
     left: 5px;
   }
   .article-item {
-    padding-left: 30px;
+    padding: 20px 40px 33px 52px;
   }
   .article-item__link {
-    font-size: 13px;
+    font-size: 12px;
   }
   .article-item__tags {
     gap: 10px;
   }
   .article-item__excerpt {
     font-weight: 300;
+  }
+  .article-item__thumbnail {
+    margin-left: 25px;
   }
   .authors {
     padding: 0 125px;
